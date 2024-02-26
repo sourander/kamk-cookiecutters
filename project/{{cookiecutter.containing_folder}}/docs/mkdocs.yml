@@ -22,11 +22,20 @@ markdown_extensions:
   # Checkboxes
   - pymdownx.tasklist:
       custom_checkbox: true
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 
 plugins:
   # Navigation page ordering
   - awesome-pages
   - search
+  # PlantUML support using the Docker container
+  - plantuml:
+      puml_url: "http://{{ cookiecutter.project_slug }}-puml:8080"
+      num_workers: 4
 
 copyright: |
   Kajaani University of Applied Sciences in {{ cookiecutter.__year_nro }}.
