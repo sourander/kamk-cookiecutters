@@ -13,13 +13,13 @@ services:
       - ./docs:/docs
     working_dir: /docs
     command: ["serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]
+    depends_on:
+      - {{ cookiecutter.project_slug }}-puml
     networks:
       - {{ cookiecutter.project_slug }}_network
   {{ cookiecutter.project_slug }}-puml:
     container_name: "{{ cookiecutter.project_slug }}-puml"
     image: plantuml/plantuml-server:latest
-    ports:
-      - "8080:8080"
     networks:
       - {{ cookiecutter.project_slug }}_network
 

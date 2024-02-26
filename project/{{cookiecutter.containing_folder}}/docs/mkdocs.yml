@@ -1,4 +1,4 @@
-site_name: '{{ cookiecutter.course_name }}'
+site_name: '{{ cookiecutter.project_name }}'
 
 theme:
   name: 'material'
@@ -38,4 +38,5 @@ plugins:
       num_workers: 4
 
 copyright: |
-  Kajaani University of Applied Sciences in {{ cookiecutter.__year_nro }}.
+  Copyrighted to the {{ cookiecutter.group_name }} team members at Kajaani University of Applied Sciences in {{ cookiecutter.__year_nro }}. 
+  KAMK and the customer company (if any) have the right to use the material for their own purposes.
