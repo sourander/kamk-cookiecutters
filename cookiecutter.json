@@ -1,0 +1,14 @@
+{
+    "templates": {
+        "oppimispaivakirja": {
+            "path": "./oppimispaivakirja",
+            "title": "Oppimispäiväkirja",
+            "description": "MkDocs learning diary"
+        },
+        "project": {
+            "path": "./project",
+            "title": "Project",
+            "description": "MkDocs for project including requirements specification, user stories, and other project documentation."
+        }
+    }
+}

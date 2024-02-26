@@ -1,0 +1,10 @@
+# A .pages file in any folder can be used to set the ordering
+# in the navigation. Use the "..." to include all (other) pages.
+# If the file does not exist, the default ordering is alphabetical.
+
+nav:
+  - index.md
+  # You can give a dir name a custom name
+  # Example: a need special character ('ö' or whitespace)
+  - "Viikkomerkinnät": weeks 
+  - ...

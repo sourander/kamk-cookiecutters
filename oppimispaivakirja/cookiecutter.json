@@ -1,0 +1,14 @@
+{
+    "_extensions": ["cookiecutter.extensions.SlugifyExtension", "cookiecutter.extensions.TimeExtension"],
+    
+    "course_name": "Linux Perusteet 2024",
+    "course_slug": "{{ cookiecutter.course_name | slugify }}",
+    
+    "containing_folder": ".",
+    
+    "author": "Lisa Johnson",
+
+    "__week_nro": "{% now 'utc', '%W' %}",
+    "__week_nro_plus": "{% now 'utc' + 'days=7', '%W' %}",
+    "__year_nro": "{% now 'utc', '%Y' %}"
+}
