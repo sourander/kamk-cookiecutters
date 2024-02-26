@@ -13,3 +13,9 @@ services:
       - ./docs:/docs
     working_dir: /docs
     command: ["serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]
+    networks:
+      - {{ cookiecutter.project_slug }}_network
+
+networks:
+    {{ cookiecutter.project_slug }}_network:
+        name: {{ cookiecutter.project_slug }}_network
