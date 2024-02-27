@@ -27,7 +27,7 @@ Running the command above will prompt you to choose a cookiecutter from the list
 
 ### Preparation step: Choose the Cookiecutter
 
-First, it will ask you to choose a cookiecutter from the list of available cookiecutters. These are the cookiecutters that are available in this repository.
+First, it will ask you to choose a cookiecutter from the list of available cookiecutters. These are the cookiecutters that are available in this repository. For this tutorial, **choose** the first one, **the learning diary**.
 
 ```
 Select template:
@@ -36,7 +36,7 @@ Select template:
 Choose from 1, 2 [1]:
 ```
 
-For this tutorial, as 
+
 
 **NOTE**: The Finnish word *oppimispäiväkirja* translates to *learning diary*. This is a Finnish word that is worth remembering if you are a student at KAMK.
 
