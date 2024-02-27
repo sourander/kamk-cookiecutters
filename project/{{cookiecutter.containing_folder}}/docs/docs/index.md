@@ -1,10 +1,6 @@
 # {{ cookiecutter.project_name }} Report
 
-This Material for MkDocs site contains the project plan and final report for a {{ cookiecutter.project_name }} (short: `{{ cookiecutter.project_slug }}`). The project has been created as a productive part of the course {{ cookiecutter.course_name }} at Kajaani University of Applied Sciences.
-
-!!! tip 
-
-    Note that the team may add and remove pages as needed. This is just a template.
+This Material for MkDocs site contains the project plan and final report for a {{ cookiecutter.project_name }} (short: `{{ cookiecutter.project_slug }}`). The project has been created as a productive part of the course {{ cookiecutter.course_name }} at Kajaani University of Applied Sciences. The group can add and remove pages and modify the content as needed.
 
 ## Authors
 

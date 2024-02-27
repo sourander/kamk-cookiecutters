@@ -1,7 +1,7 @@
-site_name: '{{ cookiecutter.project_name }}'
+site_name: "{{ cookiecutter.project_name }}"
 
 theme:
-  name: 'material'
+  name: "material"
 
 markdown_extensions:
   # Footnotes
@@ -18,15 +18,20 @@ markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  # Checkboxes
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # Checkboxes
   - pymdownx.tasklist:
       custom_checkbox: true
   # Admonitions
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-
+  # Mermaid diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   # Navigation page ordering
@@ -38,5 +43,4 @@ plugins:
       num_workers: 4
 
 copyright: |
-  Copyrighted to the {{ cookiecutter.group_name }} team members at Kajaani University of Applied Sciences in {{ cookiecutter.__year_nro }}. 
-  KAMK and the customer company (if any) have the right to use the material for their own purposes.
+  Copyrighted to the {{ cookiecutter.group_name }} team members at KAMK in {{ cookiecutter.__year_nro }}.
