@@ -11,6 +11,8 @@ If you have no idea what pipx is, it is shortly a tool for creating isolated Pyt
 
 If you have no idea of what cookiecutter is, spend 1-2 minutes reading this short documentation page: [Cookiecutter docs: Overview](https://cookiecutter.readthedocs.io/en/latest/overview.html).
 
+&nbsp;
+
 ## Usage
 
 ```bash
@@ -25,6 +27,8 @@ cookiecutter gh:sourander/kamk-cookiecutters -f
 
 Running the command above will prompt you to choose a cookiecutter from the list of available cookiecutters. After choosing a cookiecutter, you will be prompted to fill in the required fields. Below is an example of creating a learning diary for a course.
 
+&nbsp;
+
 ### Preparation step: Choose the Cookiecutter
 
 First, it will ask you to choose a cookiecutter from the list of available cookiecutters. These are the cookiecutters that are available in this repository. For this tutorial, **choose** the first one, **the learning diary**.
@@ -32,15 +36,15 @@ First, it will ask you to choose a cookiecutter from the list of available cooki
 ```
 Select template:
 1 - Oppimispäiväkirja (MkDocs learning diary)
-2 - Project (MkDocs for project including requirements specification, user stories, and other project documentation.)
+2 - Project (MkDocs for project including ...)
 Choose from 1, 2 [1]:
 ```
-
-
 
 **NOTE**: The Finnish word *oppimispäiväkirja* translates to *learning diary*. This is a Finnish word that is worth remembering if you are a student at KAMK.
 
 **NOTE**: The cookiecutter might warn you: *"You've downloaded path/to/file before."* and wants you to confirm that you want to override the template with the latest version. You should answer `y` to this question.
+
+&nbsp;
 
 ### Steps 1-4: Fill in the required fields
 
@@ -54,7 +58,7 @@ Fill in the required fields. The default value is always shown in brackets. Ther
 
 Fill the course name. It will be used in various places, such as in the title of the learning diary. Prefer the name that is in the **syllabus** (fin: opinto-opas).
 
-### Step 2:
+#### Step 2:
 
 ```
 [2/4] course_slug (whatever-you-typed-sluggiefied):
@@ -64,7 +68,7 @@ This step will show the **course name slug** for reference. You typically do not
 
 Example: If you typed `Käyttöjärjestelmäsuunnittelun alkeet 2025` to Step 1, this will offer you `kayttojarjestelmasuunnittelun-alkeet-2025` as the default value. You might prefer `kjs-alkeet-2025` for brevity.
 
-### Step 3:
+#### Step 3:
 
 ```
 [3/4] containing_folder (.):
@@ -74,7 +78,9 @@ Now, you are asked into which folder you want to create the learning diary. The 
 
 For example, you can type `diary` here and the files will be created into the `diary` folder.
 
-### Step 4:
+&nbsp;
+
+#### Step 4:
     
 ```
 [4/4] author (Lisa Johnson):
@@ -82,6 +88,8 @@ For example, you can type `diary` here and the files will be created into the `d
 
 Fill your name. It will be used in various places, such in the MkDocs "Johdanto" (eng. Introduction) page.
 
+&nbsp;
+
 ## Problems?
 
-If you have any problems, contact the course lecturer. You shouldn't need to use cookiecutter if not instructed to do so.
+If you have any problems, contact the course lecturer. You shouldn't need to use cookiecutter if not instructed to do so. The cookiecutter is typically used in the first lecture of the course. Be sure to attend the first lecture.
