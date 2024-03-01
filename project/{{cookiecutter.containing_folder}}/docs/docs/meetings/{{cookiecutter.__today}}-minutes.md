@@ -1,12 +1,12 @@
-# 2024-12-31 memo
+# {{ cookiecutter.__today }} minutes
 
 ## Meeting Information
-- **Time:** [Meeting Start Time] - [Meeting End Time] 
+- **Time:** [hh:mm] - [hh:mm] 
 - **Attendees:** [List of Attendees]
-- **Absent:** [List of Absentees]
+- **Absent:** {{  cookiecutter.group_authors}}
 
 ## Agenda
-* **[Agenda Item]**. Explain it briefly.
+* **[Agenda Item 1]**. Explain it briefly.
 * **[Agenda Item 2]**. Explain this one too.
 
 ## Discussion
@@ -37,7 +37,7 @@
 
     !!! warning
 
-        No decision here. We will discuss this further in the next meeting since our Lorem Ipsum guru was absent.
+        No decision was made. We will discuss this further in the next meeting since our Lorem Ipsum guru was absent.
 
 ## Action Items
 - **[Action Item 1]**. This forms a GitLab issue. Assign it to someone.

@@ -12,5 +12,6 @@
 
     "containing_folder": ".",
     
-    "__year_nro": "{% now 'utc', '%Y' %}"
+    "__year_nro": "{% now 'utc', '%Y' %}",
+    "__today": "{% now 'utc', '%Y-%m-%d' %}"
 }
