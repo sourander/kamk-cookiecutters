@@ -6,6 +6,8 @@
 
 This is a guide for writing the Vision and Scope document. The template (or form) itself is in another file: [Vision and Scope Template](../forms/vision.md). When you are writing the Vision and Scope, you should be thinking about **business requirements**. In others word, keep your *business hat* on. This is not the time to think about technical details.
 
+The Vision should be inspiring, but **not** a marketing speech. It should be short, easy to understand, jargon-free and stable.
+
 ## What to include
 
 You can use the headings in the template as an **"add at least these"** list. If your team has a strong reason to add or modify a section, you should do so. The most important thing is to ensure that the document is clear and understandable to all stakeholders.

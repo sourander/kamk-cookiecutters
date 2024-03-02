@@ -8,6 +8,10 @@
 
 This is a guide for writing the User Requirements document. The template (or form) itself is in another file: [User Requirements Template](../forms/srs.md).
 
+!!! warning
+
+    Both Vision and Scope plus the User Profiles should be written before this document.
+
 ## What to include
 
 1. xxx
@@ -153,7 +157,8 @@ Below is an checkpoint list that shows our plan. Checked items are the ones that
 
     - [ ] We will handle Issue hierarchies in GitLab (OMITTED!)
     - [ ] We will write a 100-page SRS document (OMITTED!)
-    - [x] We will visualize **Feature hierarchies**
+    - [x] We will define **Initiative-Epic** sets
+    - [x] We will add **Issues to GitLab** as backlog
     - [x] We will visualize **Product Roadmap**
     - [x] We will visualize **Software Architecture** 
     - [x] We will define **operating environment**
@@ -178,7 +183,9 @@ Now is a good moment to step back and make sure that you understand what entitie
 
 As of now, you only have Level 1 entities. You need to break them down to Level 2 items, which will be documented in The Spec, and Level 3, which will be added to GitLab as Issues.
 
-If you want to see a 
+!!! question "How big are they?"
+
+    One definition for Epic is that is it an Issue that cannot be done within one sprint.
 
 !!! warning
 
@@ -257,13 +264,18 @@ Alternative is to start from the **Major Features** and break them down into sma
 
     Most probably you will end up using both approaches! Approach 1 is better for user-centric features, and Approach 2 is better for system-centric features.
 
-## Features (User Stories and more)
+## Acceptance Criteria
 
-You have listed the Users earlier. Start gathering and refining user stories into User Story type Backlog Items.
+Each Issue should have an acceptance criteria. At minimum, the Level 2 Stories/Issues should have this test defined. Having that said, Epic's can also have acceptance criteria.
 
-After this, brainstorm and add those functional features that a user cannot see, and that are probably missing based on our previous documents.
+!!! tip
 
-After this, add the non-functional requirements. These requirements are not directly related to how the system behaves. They are about the system's performance, security, maintainability, and so on.
+    You can use the following questions to define the acceptance criteria. If you do not have an actual customer, answer on their behalf.
+
+    * Developer: If the feature was ready, and we are in a room together, how would I demonstrate that it is ready?
+    * Customer: [This is the acceptance criteria.]
+
+Notice that the test can be automated or manual, but it has to be specific. It has to be something that you can say "TRUE" or "FALSE" to.
 
 ## Product Roadmap
 
@@ -280,6 +292,12 @@ Your product will most probably pass data around. This data has a structure. Thi
 ## UI/UX prototype
 
 If your product has a user interface, you can make some preliminary sketches of the user interface and the site map.
+
+## Embrace the change
+
+Agile is built around elastic and adaptive mechanisms. The Spec is a living document; nothing more, nothing less. This guide is also just a guide, not a *must obey or suffer for infinity* type of scripture. Also, Scrum methodology is not something you need to follow to the letter. Don't be a purist, be a pragmatist.
+
+Your Team has multiple members with fully functional brains; trust yourselves and your team members! If something doesn't work, adapt. Do not try to "manage" the change, but **embrace the change**!
 
 
 [^d7ae54]: Wiegers K & Beatty J. 2013. *Software Requirements (3rd. ed.)*. Microsoft Press.
