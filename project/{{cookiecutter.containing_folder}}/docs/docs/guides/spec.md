@@ -29,7 +29,13 @@ Before diving deeper into the template, we need to clarify some things about the
 
 ### Elephant definition
 
-The problem, or the "elephant", is that the traditional SRS is not a good fit for agile (or Scrum). Neither are other similar documents such as Software Design Document (SSD). The traditional SRS is a long, detailed document that is written at the beginning of the project and is not updated frequently. It is a waterfall artifact [^d7ae54]. The agile manifesto states one of its core values as: *"Working software over comprehensive documentation"*. However, this does not mean we couldn't or shouldn't plan anything upfront. [^f01c74] We just need to be very careful about the level of detail that we put into it **and when**. In Scrum, developers and customers have a close collaboration, and the user stories are converted into team-specific tasks in each **increment or sprint planning**. There are, of course, cases where an old-fashioned or rigid client insists on having a biblically scaled, Courier font-faced requirements document with 3.14 cm margins using a mechanical type-writer and seal everything using a ring with emperors face on it. In that case, you have to write it or find another job (Hint: I'd do the latter).
+The problem, or the "elephant", is that the **Big Design Up Front (BDUF)** approach is not a good fit for Agile (or Scrum). The Agile manifesto states one of its core values as: *"Working software over comprehensive documentation"*. However, this does not mean we couldn't or shouldn't plan anything upfront. [^f01c74] However, you cannot simply blindly start developing stuff.
+
+Thus, in Agile, typical Waterfall artifacts such as Software Requirements Spec (SRS) or Software Design Document (SSD) are not really needed [^d7ae54]. Instead of these massive documents, we will design as little as possible to be able to start - and append the plans as we go. In Scrum, developers and customers have a close collaboration, and the user stories are converted into team-specific tasks in each **increment or sprint planning**. 
+
+??? "But my boss ..."
+
+    There are, of course, cases where an old-fashioned or rigid client insists on having a biblically scaled, Courier font-faced requirements document with 3.14 cm margins using a mechanical type-writer and seal everything using a ring with emperors face on it. In that case, you have to write it or find another job.
 
 A pure waterfall approach includes the assumption that most of the communication between the customer and the developer happens at the beginning of the project. Everything is written down in the SRS, and the developers are expected to follow the SRS to the letter. The process of converting (refined) user cases into functional (and also non-functional) requirements is a part of the SRS's writing process. This process is shown in a diagram below. Click the admonition open to see the diagram.
 
