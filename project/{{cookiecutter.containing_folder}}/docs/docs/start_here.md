@@ -29,6 +29,10 @@ The guides and forms are located in the `docs/forms` and `docs/guides` folders. 
 
 You should delete the `docs/guides` folder when you no longer need it. You shouldn't need it after the Sprint Zero.
 
+!!! tip
+
+    For more in-depth guide about technical documentation, check out [Diátaxis](https://diataxis.fr/). If you do not know the difference between tutorials, how-to guides, technical reference and explanation, you should definitely check the page out.
+
 ## Order of Work
 
 - [x] Read the Start Here document.
@@ -40,4 +44,4 @@ You should delete the `docs/guides` folder when you no longer need it. You shoul
 - [ ] Write the User Requirements form.
 - [ ] Delete the `docs/guides` folder.
 - [ ] Delete the Start Here document.
-- [ ] Continue your own documentation process.
+- [ ] Continue your own documentation process (remember Diátaxis!)
