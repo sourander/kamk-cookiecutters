@@ -44,11 +44,11 @@ This section outlines any potential dangers to the project (e.g. cause delays or
 
 A list of features can be found in this section. A feature is a section of software that offers a range of services or capabilities to meet a particular demand.
 
-| ID   | ID            | Description                                    |
-| ---- | ------------- | ---------------------------------------------- |
-| FE-1 | User accounts | Create, read, update, and delete user accounts |
-| FE-2 | [Feature 2]   | [Description]                                  |
-| FE-3 | [Feature 3]   | [Description]                                  |
+| ID     | Short name        | Description                                    |
+| ------ | ----------------- | ---------------------------------------------- |
+| INIT-1 | User accounts     | Create, read, update, and delete user accounts |
+| INIT-2 | [Major Feature 2] | [Description]                                  |
+| INIT-3 | [Major Feature 3] | [Description]                                  |
 
 ??? tip "Alternative ID scheme"
 
@@ -56,10 +56,10 @@ A list of features can be found in this section. A feature is a section of softw
 
     1. You do not have to worry about the ID numbering.
     2. The ID is more readable and easier to remember.
-    3. The children Issues will be simply named:
-        1. [UserAccount][Egg]
-        2. [UserAccount][Ham]
-        3. [UserAccount][Spam]
+    3. The children Issues (Minor Features) will be simply named:
+        1. [UserAccount][Egg] Some issue here
+        2. [UserAccount][Ham] Another issue
+        3. [UserAccount][Spam] Yet another issue
 
     Downside is that you have to lock the ID as you create it, and it can be hard to avoid name collisions with common words.
 

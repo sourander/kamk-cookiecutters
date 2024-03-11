@@ -6,13 +6,13 @@ The first (0th) sprint is the Sprint Zero. During this sprint, you will set up:
 
 * Product Vision
 * Initial backlog
-    * for 2 sprints worth of work
+    * ... for 2 sprints worth of work
 * Architecture approach
 * Coding practices
 * Development environment
 * Initial roadmap (or release plan)
 
-The release plan will most likely not be accurate, since you lack the imperical evidence on how fast your team is at delivering. That ok. You will steer the project as you go, inluding adjusting the release plan. This is why we have sprint reviews.
+The release plan will most likely not be accurate, since you lack the imperical evidence on how fast your team is at delivering. That's ok. You will steer the project as you go, including adjusting the release plan. This is why we have sprint reviews.
 
 At the end of the Sprint Zero, you should have something tangible to show to the stakeholders. Is it a shippable product? No, a customer would not probably pay for it. Having that said, it is ready based on its own acceptance criteria.
 
@@ -40,3 +40,4 @@ You should delete the `docs/guides` folder when you no longer need it. You shoul
 - [ ] Write the User Requirements form.
 - [ ] Delete the `docs/guides` folder.
 - [ ] Delete the Start Here document.
+- [ ] Continue your own documentation process.
