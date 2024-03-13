@@ -33,6 +33,17 @@ You should delete the `docs/guides` folder when you no longer need it. You shoul
 
     For more in-depth guide about technical documentation, check out [Diátaxis](https://diataxis.fr/). If you do not know the difference between tutorials, how-to guides, technical reference and explanation, you should definitely check the page out.
 
+## What will be made
+
+The required documents you will create are Vision and Scope, User Profiles, and The Spec. These artifacts will lead us to having items in four levels shown in the table below. Each level has its own home. For example, the Major Features are in the Vision and Scope. That is their single source of truth.
+
+| Level | Business term          | Scrum term           | GitLab term            | Home             |
+| ----- | ---------------------- | -------------------- | ---------------------- | ---------------- |
+| 1     | Major Feature          | Initiative           | `[A] ...`              | Vision and Scope |
+| 2     | Feature                | Epic                 | `[A][B] Issue heading` | The Spec         |
+| 3     | Functional Requirement | Story/Task/Bug/Other | Issue (label the type) | GitLab           |
+| 4     | N/A                    | Sub-Task             | Issue's Child Item     | GitLab           |
+
 ## Order of Work
 
 - [x] Read the Start Here document.

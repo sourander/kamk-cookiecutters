@@ -31,7 +31,7 @@ Before diving deeper into the template, we need to clarify some things about the
 
 The problem, or the "elephant", is that the **Big Design Up Front (BDUF)** approach is not a good fit for Agile (or Scrum). The Agile manifesto states one of its core values as: *"Working software over comprehensive documentation"*. Thus, in Agile, typical Waterfall artifacts such as Software Requirements Spec (SRS) or Software Design Document (SSD) are not really needed [^d7ae54]. 
 
-However, this does not mean we couldn't or shouldn't plan anything upfront [^f01c74]. This would lead to us aimlessly wandering in the dark. Instead of these massive documents, we will design **as little as possible** and **as late as possible**. For the first ever sprint, also known as Sprint Zero, we will do *some* upfront planning - but just enough to get us going for the first 2 sprinst. 
+However, this does not mean we couldn't or shouldn't plan anything upfront [^f01c74]. This would lead to us aimlessly wandering in the dark. Instead of these massive documents, we will design **as little as possible** and **as late as possible**. For the first ever sprint, also known as Sprint Zero, we will do *some* upfront planning - but just enough to get us going for the first 2 sprints. 
 
 A pure waterfall approach includes the assumption that most of the communication between the customer and the developer happens at the beginning of the project. Everything is written down in the SRS, and the developers are expected to follow the SRS to the letter. The process of converting (refined) user cases into functional (and also non-functional) requirements is a part of the SRS's writing process. This process is shown in a diagram below. Click the admonition open to see the diagram.
 
@@ -41,7 +41,7 @@ By contrast, in Scrum, developers and customers have a close collaboration, and 
 
     There are, of course, cases where an old-fashioned or rigid client insists on having a biblically scaled, Courier font-faced requirements document with 3.14 cm margins using a mechanical type-writer and seal everything using a ring with emperors face on it. In that case, you have to write it or find another job.
 
-We will not be doing this. We will try and practice the Agile way of doing things. Thus, the created document is simply called "The Spec". In a dream world, this information would be written in a system that integrates with your issue management tool and also with your code repository. Just to give you an idea of the alternative approach, you can click the "Functional Requirements in Waterfall" admonition below to open it. It contains a graph of how the functional requirements would be written in a waterfall project. Just to repeat: this is not how we are doing it. We are doing it the Agile way.
+We will not be doing this. We will try and practice the Agile way of doing things. Thus, the created document is simply called "The Spec".  Just to give you an idea of the alternative approach, you can click the "Functional Requirements in Waterfall" admonition below to open it. It contains a graph of how the functional requirements would be written in a waterfall project.
 
 ??? info "Functional Requirements in Waterfall"
 
@@ -105,11 +105,11 @@ In Scrum, most of the paperwork can be partially or fully replaced with a featur
 * creating Issues
 * assigning Issues to developers
 * handling the Issue lifecycle (`Unstarted` => `Ongoing` => `Completed`)
-* creating branhes and merge requests
+* creating branches and merge requests
 * discussing merge requests (e.g. code reviews)
 * ... amont other things
 
-It is important to know that the aforementioned feature-rich solutions have nested Issue hierarchies: all nodes are Issues, but some Issues have relationships such as `is member of` with other Issues. In practice, this creates a network (or a graph) of Issues, which can also be seen as a hierarchy or a DAG or a tree. **One possible way** to structure this hierarchy is shown in the diagram below. Note that there is no universal standard for this. Different companies may use different Scrum practices. Can an Epic be contained in another Epic? Maybe, maybe not. It depends on the company's business rules - which hopefully have been documented.
+It is important to know that the aforementioned feature-rich solutions have nested Issue hierarchies: all nodes are Issues, but some Issues have relationships such as `is member of` with other Issues. In practice, this creates a network (or a graph) of Issues. **One possible way** to structure this hierarchy is shown in the diagram below. Note that there is no universal standard for this. Different companies may use different Scrum practices. Can an Epic be contained in another Epic? Maybe, maybe not. It depends on the company's business rules - which hopefully have been documented.
 
 ```puml
 @startmindmap
