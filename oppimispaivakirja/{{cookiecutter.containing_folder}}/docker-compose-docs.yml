@@ -1,8 +1,10 @@
 version: '3'
 
+name: {{ cookiecutter.course_slug }}-mkdocs
+
 services:
-  {{ cookiecutter.course_slug }}-mkdocs:
-    container_name: {{ cookiecutter.course_slug }}-mkdocs
+  {{ cookiecutter.course_slug }}-service:
+    container_name: {{ cookiecutter.course_slug }}-container
     image: kamk/{{ cookiecutter.course_slug }}-diary:latest
     build:
       context: .
