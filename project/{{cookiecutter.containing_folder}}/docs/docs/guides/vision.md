@@ -91,7 +91,7 @@ Below are some examples of features, some of which may be suitable for a vehicle
 
 * Four-wheel drive
 * Seats seven passengers
-* Holsds a 4 x 1.5 litre bottles of soda
+* Holds 4 x 1.5 litre bottles of soda
 * Foldable
 * User accounts
 * Single sign-on
@@ -104,19 +104,19 @@ If visualizations are your thing, you might want to consider **a feature tree**,
 ```puml
 @startmindmap
 +[#lightblue] System X
-++ Feature FE-1
-+++_ Sub-feature FE-1-1
-+++_ Sub-feature FE-1-2
-++ Feature FE-2
-+++_ Sub-feature FE-2-1
-++ Feature FE-3
-+++_ Sub-feature FE-3-1
---[#orange] Single sign-on
----_ SSO with Google
----_ SSO with Discord
----_ SSO with Facebook
--- Feature FE-5
----_ Sub-feature FE-5-1
+++ FE-1 Major Feature
++++_ Epic-1 
++++_ Epic-2
+++ FE-2 Major Feature
++++_ Epic-3
+++ FE-3 Major Feature
++++_ Epic-4
+--[#orange] FE-5 Single sign-on
+---_ Epic-5 SSO with Google
+---_ Epic-6 SSO with Discord
+---_ Epic-7 SSO with Facebook
+-- FE-4 Major Feature
+---_ Epic-8
 @endmindmap
 ```
 

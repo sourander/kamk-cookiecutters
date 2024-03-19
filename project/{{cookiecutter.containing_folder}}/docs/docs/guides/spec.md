@@ -14,14 +14,18 @@ This is a guide for writing the User Requirements document. The template (or for
 
 ## What to include
 
-1. xxx
-    1. xxx
-    2. xxx
-    3. xxx
-2. xxx
-    1. xxx
-    2. xxx
-    3. xxx
+1. Features
+    1. FE-1: Major Feature's Name
+    2. FE-2: [Short name]
+    3. ...
+2. Feature Details
+    1. EPIC-1: CSV ingestion
+    2. EPIC-2: Ham
+    3. EPIC-3: Spam
+    4. EPIC-4: [Short name]
+3. Architecture
+4. Data Model
+5. Roadmap
 
 ## Elephant in the room
 
@@ -114,10 +118,10 @@ It is important to know that the aforementioned feature-rich solutions have nest
 ```puml
 @startmindmap
 *[#LightSeaGreen] Portfolio
-**[#AquaMarine] Initiative-1
+**[#AquaMarine] FE-1
 ***[#LightBlue] Epic-123
 ***[#LightBlue] Epic-124
-**[#AquaMarine] Initiative-2
+**[#AquaMarine] FE-2
 ***[#LightBlue] Epic-125
 ***[#LightBlue] Epic-126
 ****[#GreenYellow] Story-435
@@ -135,8 +139,8 @@ It is important to know that the aforementioned feature-rich solutions have nest
 
 Below is some terminology explanations [^61b290]:
 
-* **Portfolio** 
-    * is the company's product portfolio
+* **Portfolio item** 
+    * is the system we are designins as a part of the company's product portfolio
     * executives make decision about this
 * **Initiatives** (aka Major Features) 
     * are capabilities that add a new functionality to the product. 
@@ -190,12 +194,12 @@ We will use GitLab for those tasks that GitLab does well (backlog, sprint, label
 
 Now is a good moment to step back and make sure that you understand what entities we have so far and what will be created in The Spec phase. What we have so far are the **Major Features** from Vision and Scope document. We also have the **User Profiles** and **Use Cases** from User Requirements document. Below is a table that gathers all of these entities together. The column `Level` is a made-up term that is used only within this guide. It's purpose is to increase readability.
 
-| Level | Business term          | Scrum term           | GitLab term            | Home             |
-| ----- | ---------------------- | -------------------- | ---------------------- | ---------------- |
-| 1     | Major Feature          | Initiative           | `[A] ...`              | Vision and Scope |
-| 2     | Feature                | Epic                 | `[A][B] Issue heading` | The Spec         |
-| 3     | Functional Requirement | Story/Task/Bug/Other | Issue (label the type) | GitLab           |
-| 4     | N/A                    | Sub-Task             | Issue's Child Item     | GitLab           |
+| Level | Business term          | Scrum term           | GitLab term                 | Home             |
+| ----- | ---------------------- | -------------------- | --------------------------- | ---------------- |
+| 1     | Major Feature          | Initiative           | `[FE-1] ...`                | Vision and Scope |
+| 2     | Feature                | Epic                 | `[FE-1][EPIC-1] ...`        | The Spec         |
+| 3     | Functional Requirement | Story/Task/Bug/Other | `[FE-1][EPIC-1] Issue name` | GitLab           |
+| 4     | N/A                    | Sub-Task             | Issue's Child Item          | GitLab           |
 
 As of now, you only have Level 1 entities. You need to break them down to Level 2 items, which will be documented in The Spec, and Level 3, which will be added to GitLab as Issues.
 
@@ -280,7 +284,7 @@ Alternative is to start from the **Major Features** and break them down into sma
 
     Most probably you will end up using both approaches! Approach 1 is better for user-centric features, and Approach 2 is better for system-centric features.
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 Each Issue should have an acceptance criteria. At minimum, the Level 2 Stories/Issues should have this test defined. Having that said, Epic's can also have acceptance criteria.
 
@@ -293,21 +297,18 @@ Each Issue should have an acceptance criteria. At minimum, the Level 2 Stories/I
 
 Notice that the test can be automated or manual, but it has to be specific. It has to be something that you can say "TRUE" or "FALSE" to.
 
-## Product Roadmap
-
-TODO.
-
 ## Software Architecture design
 
 When possible: **show, don't tell**. Thus, we will visualize the software architecture. This can be done using PlantUML, Mermaid, Excalidraw, draw.io or similar.
+
 
 ## Data Model
 
 Your product will most probably pass data around. This data has a structure. This structure is called a data model. You should document it. PlantUML can be used to visualize the data model as a yaml or as class diagram.
 
-## UI/UX prototype
+## Product Roadmap
 
-If your product has a user interface, you can make some preliminary sketches of the user interface and the site map.
+Product roadmap is a simple, high-level plan of what will be delivered when. It is like a gym workout plan with steps like "By this date, I will be able to do 5 push-ups". In this case, five push-ups would be an Epic.
 
 ## Embrace the change
 

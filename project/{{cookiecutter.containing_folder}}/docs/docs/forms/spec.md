@@ -10,7 +10,7 @@ Below is a template you may use.
 
 Break down the **Major Features** (Initiatives) into one t-shirt size smaller **Features** (Epics). Make one list per Initiative. The details of the Features are described in the next section. The navigation or ToC (right side of the page) should able to quickly jump to the Feature Details section of any given Feature.
 
-### FE-1: Major Epic's Name
+### FE-1: Major Feature's Name
 
 | ID     | Short name    | Priority | Status | Date Updated | Rationale                                 |
 | ------ | ------------- | -------- | ------ | ------------ | ----------------------------------------- |
@@ -50,7 +50,7 @@ Break down the **Major Features** (Initiatives) into one t-shirt size smaller **
     1. Lorem ipsum.
     2. Dolor sit amet.
 
-### EPIC-4: Something short
+### EPIC-4: [Short name]
 
 **Description**: Neural network must be able to use XXX data.
 
@@ -167,3 +167,42 @@ color (ENUM):
 - Green
 @endyaml
 ```
+
+## Product Roadmap
+
+The roadmap is a high-level plan of what will be delivered when. The tracked item's are the Epic's. If the **Epic 1** is expected to be done by date yyyy/mm/dd, it would mean that all issues within that Epic would be done. Those issues can be found in GitLab and are named like:
+
+* `[FE-1][EPIC-1] Subtask of the Epic`
+* `[FE-1][EPIC-1] Another subtask of the Epic`
+* `[FE-1][EPIC-1] Yet another subtask of the Epic`
+* `[FE-1][EPIC-1] And so on`
+
+```puml
+@startgantt
+Project starts 2024-03-20
+[xxx] starts 2024-03-20 and ends 2024-03-24
+[yyy] starts at [xxx]'s end
+[yyy] ends 2024-03-31
+
+[sprint 0] starts at 2024-04-03 and lasts 7 days
+[EPIC-1 CSV Investion] happens at [sprint 0]'s end
+
+[sprint 1] starts at [sprint 0]'s end and lasts 7 days
+[EPIC-2 Ham] happens at [sprint 1]'s end
+[EPIC-3 Spam] happens at [sprint 1]'s end
+[EPIC-42 Life] happens at [sprint 1]'s end
+
+[sprint 2] starts at [sprint 1]'s end and lasts 7 days
+[sprint 3] starts at [sprint 2]'s end and lasts 7 days
+[sprint 4] starts at [sprint 3]'s end and lasts 7 days
+[sprint 5] starts at [sprint 4]'s end and lasts 7 days
+[sprint 6] starts at [sprint 5]'s end and lasts 7 days
+
+[Final Demo] happens at 2024-05-24
+
+@endgantt
+```
+
+!!! tip
+
+    Note that the release plan or release roadmap doesnt' have to be in a Gantt chart. You may replace it with any other type of human-readable plan. The Gantt chart is just an example.
