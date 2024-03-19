@@ -24,7 +24,7 @@ This contains a **bullet point list** of users. Each user, like the stakeholders
 
 ## 3: Temporary user stories
 
-You can write the initial user stories at this point. Later on, you will move them to GitLab while writing **The Spec** document. During this point, you can also refine them, appoint them an Epic, give them ID numbers, acceptance criteria, and so on. They will also be accompanied by technical requirements and, a bit later, bugs too. For now, you can have them as a simple list.
+Write the initial user stories at this point. Later on, you will move them to GitLab (while writing **The Spec** document). During that time, you will appoint them an Epic. For now, you can have them as a simple list.
 
 * As a [type of user], I want [some goal] so that [some reason].
 * ...

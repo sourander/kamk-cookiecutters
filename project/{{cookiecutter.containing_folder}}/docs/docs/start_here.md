@@ -21,14 +21,14 @@ You should delete the `docs/guides` folder when you no longer need it. You shoul
 
 The required documents you will create are Vision and Scope, User Profiles, and The Spec. These artifacts will lead us to having items in four levels shown in the table below. Each level has its own home. For example, the Major Features are in the Vision and Scope. That is their single source of truth.
 
-| Level | Business term          | Scrum term           | GitLab term                 | Home             |
-| ----- | ---------------------- | -------------------- | --------------------------- | ---------------- |
-| 1     | Major Feature          | Initiative           | `[FE-1] ...`                | Vision and Scope |
-| 2     | Feature                | Epic                 | `[FE-1][EPIC-1] ...`        | The Spec         |
-| 3     | Functional Requirement | Story/Task/Bug/Other | `[FE-1][EPIC-1] Issue name` | GitLab           |
-| 4     | N/A                    | Sub-Task             | Issue's Child Item          | GitLab           |
+| Level | Business term          | Scrum term           | GitLab term        | Home             |
+| ----- | ---------------------- | -------------------- | ------------------ | ---------------- |
+| 1     | Major Feature          | Initiative           | N/A                | Vision and Scope |
+| 2     | Feature                | Epic                 | Epic               | GitLab Group     |
+| 3     | Functional Requirement | Story/Task/Bug/Other | Issue with Label   | GitLab Project   |
+| 4     | N/A                    | Sub-Task             | Issue's Child Item | GitLab Project   |
 
-The table above is the single most important table in this tutorial. It is the key to understanding the relationship between the documents and the GitLab issues. Study it well.
+The table above is the single most important table in this tutorial. It is the key to understanding the relationship between the documents and the GitLab issues. It is suggested to also read the Atlassian's article [Stories, epics, and initiatives](https://www.atlassian.com/agile/project-management/epics-stories-themes)
 
 ## Sprint Zero
 

@@ -1,11 +1,5 @@
 # User Profiles
 
-!!! warning
-
-    This page, as well as the whole "Guides" section, should be removed when no longer needed.
-
-## What to include
-
 This is a guide for writing the User Profiles document. The template (or form) itself is in another file: [User Profiles Template](../forms/user.md). 
 
 !!! warning
@@ -18,13 +12,15 @@ This is a guide for writing the User Profiles document. The template (or form) i
 2. Use cases visualized
 3. Temporary user stories
 
-## User story
+## Focus on User's needs
 
-The user requirements are typically written in the form of user stories (remember: we are assuming the Agile approach!). The user story is a simple sentence that describes the user's need. The user story is written in the form of:
+Continuying with the airline example (see: [Vision and Scope guide](vision.md)), a user story might be a **"Check in for a flight"** task that the passenger wants to perform. The book by Wiegers and Betty puts it like this: *"Written as a user story, the same user requirement might read: "As a passenger, I want to check in for a flight so I can board my airplane."* [^0a1d1b]
 
 ```
 As a <type of user>, I want <some goal> so that <some reason>.
 ```
+
+Use cases (and user stories from Agile world) are user-centric, not product-centric. Later on, the system's technical, functional requirements and details are fleshed out using these user cases/stories as a starting point. In Agile, you would have a backlog filled with user stories, and you would work on them in iterations [^0a1d1b].
 
 Here are some examples:
 
@@ -32,11 +28,9 @@ Here are some examples:
 * As a data engineer, I want to be able to schedule a data pipeline so that I don't have to manually launch it.
 * As a product owner, I want to be able to see the daily device registrations by country so that I can make data-driven decisions.
 
-## Use Cases and Stories
+### User Stories vs. Use Cases
 
-Continuying with the airline example, a user story might be a **"Check in for a flight"** task that the passenger wants to perform. The book by Wiegers and Betty puts it like this: *"Written as a user story, the same user requirement might read: "As a passenger, I want to check in for a flight so I can board my airplane."* [^d7ae54]
-
-Use cases (and user stories from Agile world) are user-centric, not product-centric. Later on, the system's technical, functional requirements and details are fleshed out using these user cases/stories as a starting point. In Agile, you would have a backlog filled with user stories, and you would work on them in iterations [^d7ae54].
+Something here.
 
 * Using the ("non-Agile") user case approach, we would:
     - [x] Write user cases
@@ -96,4 +90,4 @@ If your project is a data platform, expect that the User Requirements Document w
 
 Thus, even if there is limited amount of users, we will still create different types of Issues that are typical for Scrum projects. These can be Epics, User Stories, Tasks, Bugs and similar. in the project management tool - depending on what the chosen tool supports.
 
-[^d7ae54]: Wiegers K & Beatty J. 2013. *Software Requirements (3rd. ed.)*. Microsoft Press.
+[^0a1d1b]: Wiegers K. & Beatty J. *Software Requirements (3rd. ed.)*. Microsoft Press. 2013.

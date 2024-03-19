@@ -1,63 +1,5 @@
 # The Spec
 
-Below is a template you may use.
-
-!!! warning
-
-    This is currently a work in progress. The template is not yet complete.
-
-## Features
-
-Break down the **Major Features** (Initiatives) into one t-shirt size smaller **Features** (Epics). Make one list per Initiative. The details of the Features are described in the next section. The navigation or ToC (right side of the page) should able to quickly jump to the Feature Details section of any given Feature.
-
-### FE-1: Major Feature's Name
-
-| ID     | Short name    | Priority | Status | Date Updated | Rationale                                 |
-| ------ | ------------- | -------- | ------ | ------------ | ----------------------------------------- |
-| EPIC-1 | CSV ingestion | High     | Open   | 2020-12-31   | CSV is Research team's default            |
-| EPIC-2 | Ham           | Medium   | Open   | 2020-12-31   | Ham is needed in pizza                    |
-| EPIC-3 | Spam          | Low      | Open   | 2020-12-31   | Ham must be accompanied by spam spam spam |
-
-### FE-2: [Short name]
-
-| ID     | Short name      | Priority | Status | Date Updated | Rationale                                     |
-| ------ | --------------- | -------- | ------ | ------------ | --------------------------------------------- |
-| EPIC-4 | Something short | High     | Open   | 2020-12-31   | One-liner of this thingies reason of existing |
-
-## Feature Details
-
-### EPIC-1: CSV ingestion
-
-**Description**: Neural network must be able to use XXX data.
-
-!!! success "Acceptance Criteria"
-    1. Lorem ipsum.
-    2. Dolor sit amet.
-
-### EPIC-2: Ham
-
-**Description**: Neural network must be able to use XXX data.
-
-!!! success "Acceptance Criteria"
-    1. Lorem ipsum.
-    2. Dolor sit amet.
-
-### EPIC-3: Spam
-
-**Description**: Neural network must be able to use XXX data.
-
-!!! success "Acceptance Criteria"
-    1. Lorem ipsum.
-    2. Dolor sit amet.
-
-### EPIC-4: [Short name]
-
-**Description**: Neural network must be able to use XXX data.
-
-!!! success "Acceptance Criteria"
-    1. Lorem ipsum.
-    2. Dolor sit amet.
-
 ## Architecture
 
 Even though we are avoiding the Big Design Up Front (BDUF), we still need to have a high-level architecture in mind. This is to ensure that the system is scalable, maintainable, and everyone in the team is on the same page. If need be, you can move this arcitechture to a separate document. For now, it is here for the sake of simplicity.
@@ -80,7 +22,7 @@ graph TD
     B -->|Response| A
 ```
 
-### Component Architectures
+### Component Diagrams
 
 #### Component 1
 
@@ -168,14 +110,9 @@ color (ENUM):
 @endyaml
 ```
 
-## Product Roadmap
+## Product Schedule
 
-The roadmap is a high-level plan of what will be delivered when. The tracked item's are the Epic's. If the **Epic 1** is expected to be done by date yyyy/mm/dd, it would mean that all issues within that Epic would be done. Those issues can be found in GitLab and are named like:
-
-* `[FE-1][EPIC-1] Subtask of the Epic`
-* `[FE-1][EPIC-1] Another subtask of the Epic`
-* `[FE-1][EPIC-1] Yet another subtask of the Epic`
-* `[FE-1][EPIC-1] And so on`
+Some projects are continuous, some are not. Our University projects have a set deadline. Visualize it below using a Gantt chart. Also, if there are some expected events that affect the project, add them to the chart. For example, if you are expecting a hardware device to arrive, add it to the chart. Or maybe the client wants to see a demo at a certain date. Add it to the chart.
 
 ```puml
 @startgantt
@@ -185,15 +122,15 @@ Project starts 2024-03-20
 [yyy] ends 2024-03-31
 
 [sprint 0] starts at 2024-04-03 and lasts 7 days
-[EPIC-1 CSV Investion] happens at [sprint 0]'s end
 
 [sprint 1] starts at [sprint 0]'s end and lasts 7 days
-[EPIC-2 Ham] happens at [sprint 1]'s end
-[EPIC-3 Spam] happens at [sprint 1]'s end
-[EPIC-42 Life] happens at [sprint 1]'s end
+[Hardware device No.1 is expected to arrive] happens at [sprint 1]'s end
 
 [sprint 2] starts at [sprint 1]'s end and lasts 7 days
+
 [sprint 3] starts at [sprint 2]'s end and lasts 7 days
+[Client wants to see a demo] happens at [sprint 3]'s end
+
 [sprint 4] starts at [sprint 3]'s end and lasts 7 days
 [sprint 5] starts at [sprint 4]'s end and lasts 7 days
 [sprint 6] starts at [sprint 5]'s end and lasts 7 days
@@ -202,7 +139,3 @@ Project starts 2024-03-20
 
 @endgantt
 ```
-
-!!! tip
-
-    Note that the release plan or release roadmap doesnt' have to be in a Gantt chart. You may replace it with any other type of human-readable plan. The Gantt chart is just an example.

@@ -1,9 +1,5 @@
 # Vision and Scope
 
-!!! warning
-
-    This page, as well as the whole "Guides" section, should be removed when no longer needed.
-
 This is a guide for writing the Vision and Scope document. The template (or form) itself is in another file: [Vision and Scope Template](../forms/vision.md). When you are writing the Vision and Scope, you should be thinking about **business requirements**. In others word, keep your *business hat* on. This is not the time to think about technical details.
 
 The Vision should be inspiring, but **not** a marketing speech. It should be short, easy to understand, jargon-free and stable.
@@ -38,7 +34,7 @@ Business requirements should be written into the **Problem Statement** section i
     
     Waterfall and Agile all the opposite methods, but there are various other phased or incremental approaches that may be used. These land somewhere in-between the two extremes (using e.g. multiple Release Cycles with potentially different durations).
 
-The book Software Requirements gives an example: *"Suppose and airline wants to reduce airport counter staff cost by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport."* [^d7ae54] This is a business requirement that you would include in the vision and scope document. You would also inlude the vision of the solution. Vision is the high-level description of the desired outcomes of the project.
+The book Software Requirements gives an example: *"Suppose and airline wants to reduce airport counter staff cost by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport."* [^0a1d1b] This is a business requirement that you would include in the vision and scope document. You would also inlude the vision of the solution. Vision is the high-level description of the desired outcomes of the project.
 
 ## Who provides the business requirements?
 
@@ -79,13 +75,9 @@ Notice that the process of gathering requirements **might actually include codin
     * "Why does Jack always end up using various fonts in his PowerPoint slides. We should all stick to the chosen theme."
     * "Oh my god, our new employee is so overdressed for this event! This event has been casual for years."
 
-## What is a Feature?
+## What is a Major Feature?
 
-In the ToC (the heading [What to Include](#what-to-include)) above, there is a section called "Major features". Note that a feature **is not** a technical detail like *"dropdown selectbox values are saved in the browser session state"*. A feature is a service that the system provides to the user and that provides value to the user. Some features are huge and complex, some are tiny. In the vision and scope document, it is helpful to limit the product's features to roughly ten, as this usually results in a degree of complexity that most readers can handle [^cb2bb5]. Develop a label for each feature (e.g. "FE-1") and a short name for the feature.
-
-!!! tip 
-
-    If you have way more than 10 features, try sticking to the major ones. The rest will be documented in the "User Requirements" and "System Requirements" documents.
+Note that a major feature **is not** a technical detail like *"dropdown selectbox values are saved in the browser session state"*. A major feature is a service that the system provides to the user and that provides value to the user. Some features are huge and complex, some are tiny. In the vision and scope document, it is helpful to limit the product's features to roughly ten, as this usually results in a degree of complexity that most readers can handle [^621cc8]. Develop a label for each feature (e.g. "FE-1") and a short name for the feature.
 
 Below are some examples of features, some of which may be suitable for a vehicle, some for a software system, some for hand-held devices etc.
 
@@ -97,9 +89,11 @@ Below are some examples of features, some of which may be suitable for a vehicle
 * Single sign-on
 * Online payment
 * Ambidextrous
-* Colorblind mode
+* Colorblind accessible
 
-If visualizations are your thing, you might want to consider **a feature tree**, **a context map** or **a mind map**. This can help to visualize the features and their relationships. Sadly, PlantUML does not support feature trees, but you can create simple mind maps using PlantUML or Mermaid. Below is a mindmap created with PlantUML. Easiest way to write PlantUML syntax is to stare at the [PlantUML Language Reference Guide (PDF)](https://plantuml.com/guide) while writing it.
+## Major Feature > Epic
+
+A Major Feature will later on be broken down into Epics and Issues. Each Issue will be assigned an Epic. There can even be an Epic called `Sprint 1 Unplanned Work` that will catch the unplanned (but expected) work. For now, think big. Ignore the Epic's and focus on the Major Features.
 
 ```puml
 @startmindmap
@@ -126,9 +120,6 @@ Terminology:
 * **Feature FE-1** is a major feature of the system.
 * **Sub-feature FE-1-1** is a sub-feature of the major feature FE-1. This is something we would call "An Epic".
 
-!!! warning
 
-    None of the items above are actually added to GitLab as Issues. We will add one-step tinier items to the backlog as Issues.
-
-[^d7ae54]: Wiegers K & Beatty J. 2013. *Software Requirements (3rd. ed.)*. Microsoft Press.
-[^cb2bb5]: Greene J & Stellman A. 2005. *Applied Software Project Management*. O'Reilly Media.
+[^0a1d1b]: Wiegers K. & Beatty J. *Software Requirements (3rd. ed.)*. Microsoft Press. 2013.
+[^621cc8]: Greene J. & Stellman A. *Applied Software Project Management*. O'Reilly Media. 2005.

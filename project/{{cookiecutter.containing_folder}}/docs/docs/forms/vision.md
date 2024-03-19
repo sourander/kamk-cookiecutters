@@ -2,7 +2,7 @@
 
 ## Template Information
 
-Use this form/template to create the **Vision and Scope Document**. This template is heavily inspired by the *Applied Software Project Management* book [^cb2bb5]. Read the "Chapter 2. Software Project Planning" for more information. The major differences are that this template is shorter, and also the user-related section have been moved to the "User Requirements" document. This change is in line with the Software Requirementes book's templates [^d7ae54].
+Use this form/template to create the **Vision and Scope Document**. This template is heavily inspired by the *Applied Software Project Management* book [^621cc8]. Read the "Chapter 2. Software Project Planning" for more information. The major differences are that this template is shorter, and also the user-related section have been moved to the "User Requirements" document. This change is in line with the Software Requirementes book's templates [^0a1d1b].
 
 ## 1: Problem Statement
 
@@ -62,5 +62,5 @@ Features are frequently purposefully omitted from projects. Instead of deleting 
 | ID  | Short Name | Description |
 | --- | ---------- | ----------- |
 
-[^cb2bb5]: Greene J & Stellman A. 2005. *Applied Software Project Management*. O'Reilly Media.
-[^d7ae54]: Wiegers K & Beatty J. 2013. *Software Requirements (3rd. ed.)*. Microsoft Press.
+[^621cc8]: Greene J. & Stellman A. *Applied Software Project Management*. O'Reilly Media. 2005.
+[^0a1d1b]: Wiegers K. & Beatty J. *Software Requirements (3rd. ed.)*. Microsoft Press. 2013.
