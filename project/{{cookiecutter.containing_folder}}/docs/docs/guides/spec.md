@@ -14,6 +14,7 @@ This is a guide for writing **The Spec**. The template is in another file: [The 
     1. High-Level Architecture
     2. Component Diagrams
 2. Data Model
+3. Product Schedule
 
 ## Agile and The Spec
 
@@ -113,7 +114,8 @@ Below is some terminology explanations [^61b290]:
 
 * **Portfolio item** 
     * is the system we are designins as a part of the company's product portfolio
-    * executives make decision about this
+    * executives own this
+    * we will not worry about during this course
 * **Initiatives** (aka Major Features) 
     * are capabilities that add a new functionality to the product. 
     * *example: Online Booking.*
@@ -122,7 +124,7 @@ Below is some terminology explanations [^61b290]:
     * *example: Booking using a mobile app.*
 * **Stories** 
     * are the smallest forms of requirements that can be implemented on their own while still producing some value. 
-    * *example: User can view the booking history.*
+    * *example: As a user, I want to view my booking history so that I can see what I have booked in the past.*
 * **Task, Bug, Maintenance**
     * are all same-level items as Stories
     * *example Task: Allow Booking to access the Database API virtual network.*
@@ -130,13 +132,13 @@ Below is some terminology explanations [^61b290]:
 * **Sub-Task**
     * are the smallest units of work that can be done.
     * does not produce any value on its own.
-    * *example: Create a Thingies table in the database.*
+    * *example: Create a xxxxxx table in the database.*
 
-This kind of structure **is nearly impossible to create in GitLab**. Thus, we will not even try. We will use The Spec for drafting the big picture and GitLab for handling the smaller-than-epic items.
+During this course, we will be creating items of type: Epics, Issues (of any type) and Sub-Tasks in GitLab. The Initiatives are the Major Features in the Vision and Scope document. The Epic descriptions in GitLab should make it clear what the Epic is about, and thus, what Major Feature it is a part of. However, we will not create any entities in GitLab that would represent each Initiative. We will only create Epics, Issues and Sub-Tasks.
 
 ## Epics, GitLab and Me
 
-In GitLab, the Epic's can be created when working with a group. These Epic's can then be used in the projects that are in the group.
+In GitLab, the Epic's can be created when working with a group. These Epic's can then be used in the Projects that are in the group. Thus, even though you might only need a single code repository, you will still **need to create a group in GitLab**.
 
 ![GitLab Groups](../images/removeme-gitlab-group.png)
 
@@ -148,13 +150,15 @@ In GitLab, the Epic's can be created when working with a group. These Epic's can
 
 ![GitLab Issue Board](../images/removeme-gitlab-issueboard.png)
 
-**Figure 3:** *The Issue Board can be grouped by Epic.*
+**Figure 3:** *The Issue Board can be grouped by Epic. Issues without an Epic are part of unorganized backlog. They should be gathered into Epic's during spring planning sessions.*
 
 ## How to define The Epics
 
+Forming the Epics and Issues is difficult. It can take a company months or even years to actually start learning how to scope things. The following approaches should help you get started.
+
 ### Approach 1: Start from Level 3
 
-This is user-centric approach. Idea is to look at the **User Profiles** and find commonalities. This will likely require a brainstorming session with the team. It might be a good idea to ditch the computer and use a whiteboard or post-it notes. Or, you can use Microsoft Teams' whiteboard feature. Or Miro. Whatever works for you.
+This is user-centric approach: start from user needs. Idea is to look at the **User Profiles** and find commonalities. This will likely require a brainstorming session with the team. It might be a good idea to ditch the computer and use a whiteboard or post-it notes. Or, you can use Microsoft Teams' whiteboard feature. Or Miro. Whatever works for you.
 
 This is simple:
 
@@ -162,19 +166,19 @@ This is simple:
 2. Spawn even more user stories by brainstorming with the team..
 3. Write them down: `As a <role>, I want to <something> so that <some reason>`.
 
-After you feel that you have added them all (or at least most of them), find the commonalities and group them into **Epics**. This is the Level 2. Add this Epic to the GitLab.
+After you feel that you have added them all important user stories, find the commonalities and group them into **Epics**. An epic is not a random collection of Issues. They should share the acceptance criteria. Also, if it can be done within a day, it is clearly not large enough for an Epic. One definition of an Epic that it cannot be completed within a single sprint.
 
 ??? note "Example: Retro Game Console"
 
-    Imagine that your upcoming product is a hand-held gaming console. The games are distributed as cartridges, but the device has one built-in game, a 2D platformer called `Retro Encabulator Sisters`. Based on your customer reserach (queries, user groups, interviews, surveys), you have found a user story that goes like this:
+    Imagine that your upcoming product is a hand-held gaming console. The games are distributed as cartridges. The device has one built-in game, a 2D platformer called `Retro Encabulator Sisters`. Based on your customer reserach (queries, user groups, interviews, surveys), you have found a user story that goes like this:
 
-    * As a gamer, I want to be able to save the game state, so that I can continue playing later.
+    * As a gamer, I want to be able to save the Encabulator Sisters game state, so that I can continue playing later.
 
     For a non-technical user, this might sound like a simple feature: 
     
     > Duh, just add like three lines or code, bruh.<br>- xxEliteSniperxx
 
-    In practice, this might be a lot more complicated. During Vision and Scope, there might have been an idea about adding a  persistent data block device to the console. Maybe this Major Feature was omitted, since it would add weight to the system or increase the price. Instead of persisting the `Retro Encabulator Sisters`'s game state to the non-volatile memory, you may solve this by serializing the game state and displaying it as a string (e.g. `ABC123`) for the player.
+    In practice, this might be a lot more complicated. During Vision and Scope, there might have been an idea about adding a persistent data storage to the console. Maybe this Major Feature was omitted, since it would add weight to the system or increase the price. Instead of persisting the `Retro Encabulator Sisters`'s game state to the non-volatile memory, you may solve this by serializing the game state and displaying it as a string (e.g. `ABC123`) for the player.
 
     This user story, and some other similar stories, would spawn an Epic called `Game State`. This Epic may contain multiple Issues. Note that the actual Issues will be fleshed out later, in GitLab, during sprint planning.
 
@@ -185,7 +189,7 @@ After you feel that you have added them all (or at least most of them), find the
 
 ### Approach 2: Start from Level 1
 
-Alternative is to start from the **Major Features** and break them down into smaller **Features**. This approach is more system-centric, but sometimes necessary. If a Major Feature is "Four wheel drive", does is spawn some Features that are system-centric? The user may not have a *need* for an `Auto Off` feature that will kick in when speed is over xx km/h, but the car surely would benefit from this.
+Alternative is to start from the **Major Features** and break them down into smaller **Features**. This approach is more system-centric, but sometimes necessary. If a Major Feature is "Four wheel drive", does is spawn some Epic-scale Features?
 
 ??? note "Example: Big Data Platform"
 
@@ -195,19 +199,14 @@ Alternative is to start from the **Major Features** and break them down into sma
 
     You might end up with **Level 2** Features (Epics) such as:
 
-    ```txt
-    A = ID for Data Governance
-    B = ID for Data Protection and Access Control
+    * Implement access control (RBAC or ABAC)
+    * Define data sensitivity classification framework
+    * Establish auditing trails to track data access and modifications
+    * Define data retention and archival policies
+    * Conduct training sessions for data stewards on data governance
+    * ...
 
-    [A][B] Implement access control (RBAC or ABAC)
-    [A][B] Define data sensitivity classification framework
-    [A][B] Establish auditing trails to track data access and modifications
-    [A][B] Define data retention and archival policies
-    [A][B] Conduct training sessions for data stewards on data governance
-    [A][B] ...
-    ```
-
-    P.S. The "conduct training sessions" is unlikely going to be the source of GitLab branches or Merge Requests. However, it is still required to be added to GitLab, since we are using GitLab as our project management tool ("as a JIRA").
+    P.S. The "conduct training sessions" is unlikely going to be the source of GitLab branches or Merge Requests. However, it is still required to be added to GitLab, since we are using GitLab as our project management tool.
 
 !!! tip
 
@@ -222,7 +221,7 @@ Add acceptance criteria to each Issue and to each Epic. This will be added in th
     You can use the following questions to define the acceptance criteria. If you do not have an actual customer, answer on their behalf.
 
     * Developer: If the feature was ready, and we are in a room together, how would I demonstrate that it is ready?
-    * Customer: [This is the acceptance criteria.]
+    * Customer: [The reply is the acceptance criteria.]
 
 Notice that the test can be automated or manual, but it has to be specific. It has to be something that you can say `TRUE` or `FALSE` to.
 
@@ -234,9 +233,15 @@ When possible: **show, don't tell**. Thus, we will visualize the software archit
 
 Your product will most probably pass data around. This data has a structure. This structure is called a data model. You should document it. PlantUML can be used to visualize the data model as a yaml or as class diagram.
 
+## Product Schedule
+
+Product schedule works are a helping calendar when timing Issues, Epic's and other events in GitLab. Gantt chart may not be the best tool for this, but it is easily available in PlantUML and fits the purpose. Check the example in the Form. Change the dates to match your course schedule.
+
 ## Product Roadmap
 
-Product roadmap is a simple, high-level plan of what will be delivered when. We will be using GitLab's **Epic Board** for this purpose. Set estimated start and end dates to the Epic's. During demo session, you should be prepared to show the roadmap to the stakeholders.
+Product roadmap is a simple, high-level plan of what will be delivered when. We will be using GitLab's **Epic Board** for this purpose. Using GitLab, add estimated start and end dates to the Epic's.
+
+Since we are using Epic Board, there is no need to add the Roadmap to The Spec. However, you should be prepared to show the roadmap to the stakeholders during the demo session.
 
 ## Embrace the change
 

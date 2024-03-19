@@ -1,6 +1,6 @@
 # Vision and Scope
 
-This is a guide for writing the Vision and Scope document. The template (or form) itself is in another file: [Vision and Scope Template](../forms/vision.md). When you are writing the Vision and Scope, you should be thinking about **business requirements**. In others word, keep your *business hat* on. This is not the time to think about technical details.
+This is a guide for writing the Vision and Scope document. The form is in another file: [Vision and Scope Form](../forms/vision.md). When you are writing the Vision and Scope, you should be thinking about **business requirements**. In others word, keep your *business hat* on. This is not the time to think about technical details.
 
 The Vision should be inspiring, but **not** a marketing speech. It should be short, easy to understand, jargon-free and stable.
 
@@ -22,19 +22,20 @@ You can use the headings in the template as an **"add at least these"** list. If
 
 Business requirements should be written into the **Problem Statement** section in the Vision and Scope document. The business requirements are the high-level needs of the organization: what is the organization hoping to achieve. Instead of having these hopes and dreams scattered around in chat logs, emails, post-it notes and as tribal knowledge, it is a good idea to gather and document them in one place. **This is that place**. Writing the business requirements down gives all stakeholders a common understanding of what the project is about, what is the background or what are the prior steps taken, what is the expected outcome, and what is inluded and what is not included.
 
+The book Software Requirements gives an example: *"Suppose and airline wants to reduce airport counter staff cost by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport."* [^0a1d1b] This is a business requirement that you would include in the vision and scope document. You would also inlude the vision of the solution. Vision is the high-level description of the desired outcomes of the project.
+
 !!! tip
 
     The vision and scope document is a living document, but:
 
-    * Business requirements should remain fairly stable.
-    * Vision should remain fairly stable.
+    * Business requirements and Vision should remain fairly stable.
     * Scope can change as the project progresses by each iteration.
 
      In traditional waterfall projects, the scope is typically fixed at the beginning of the project. In **Agile projects** (e.g. Scrum), the scope can change after each iteration. Each timeboxed iteration is called a sprint. Each sprint will focus on prioritized user stories from the ever-growing backlog.
     
-    Waterfall and Agile all the opposite methods, but there are various other phased or incremental approaches that may be used. These land somewhere in-between the two extremes (using e.g. multiple Release Cycles with potentially different durations).
+    Waterfall and Agile are the opposite methods, but there are various other phased or incremental approaches that may be used. These land somewhere in-between the two extremes (using e.g. multiple Release Cycles with potentially different durations).
 
-The book Software Requirements gives an example: *"Suppose and airline wants to reduce airport counter staff cost by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport."* [^0a1d1b] This is a business requirement that you would include in the vision and scope document. You would also inlude the vision of the solution. Vision is the high-level description of the desired outcomes of the project.
+
 
 ## Who provides the business requirements?
 
@@ -47,7 +48,7 @@ The hopes and dreams (or goals) typically come from:
 
 For example, the marketing department might request or propose expanding to new territories. Based on their research, they have found that the company could increase user base by `xx %` if the software was available in `<language>` or in `<country or region>`. This is a business opportunity.
 
-Another example could be that the executives want to increase the customer satisfaction regarding the support call queues from `X` to `Y`  after hearing how `Acme Corporation` has used a chatbot to answer the most common questions in a similar business case. This is a business opportunity.
+Another example could be that the executives want to increase the customer satisfaction regarding the support call queues from `X` to `Y`  after hearing how `Acme Corporation` has used a chatbot to answer the most common questions in a similar business case. This, too, is a business opportunity.
 
 Third example would be that the data protection officer has researched that the company is not compliant with the new data protection regulation. Maybe EU is introducing a new regulation and this requires that the customer must be given a way to opt-out from data sharing between the various loosely connected systems that the company has (e.g. `Chat <=> Posts <=> Marketing <=> Jobs` if the company is a social media platform and a job board). This is not a business opportunity, but a problem to solve. This also can be a business requirement.
 
@@ -61,7 +62,7 @@ Third example would be that the data protection officer has researched that the 
 
 ## Why not simply start coding?
 
-Human communication is error-prone. The vision and scope document is a way to ensure that everyone is mostly on the same page. Note that there will always be room for misunderstandings and someone will end up asking for alterations later on. For this, a company has to develop their own business requirements change management process; this will include a way to propose and approve changes to the vision and scope document as well as any other document.
+Human communication is error-prone. The vision and scope document is a way to ensure that everyone is mostly on the same page. Note that there will always be room for misunderstandings and someone will end up asking for alterations later on. For this, a company has to develop their own business requirements change management process; this will include a way to propose and approve changes to the vision and scope document as well as any other document. You can compare this to the [RFC process in the IETF](https://www.ietf.org/standards/rfcs/).
 
 Notice that the process of gathering requirements **might actually include coding and rapid prototyping!** This all depends on the project and the team and the chosen development methodology.
 
@@ -91,34 +92,30 @@ Below are some examples of features, some of which may be suitable for a vehicle
 * Ambidextrous
 * Colorblind accessible
 
-## Major Feature > Epic
+## Major Feature is larger than Epic
 
-A Major Feature will later on be broken down into Epics and Issues. Each Issue will be assigned an Epic. There can even be an Epic called `Sprint 1 Unplanned Work` that will catch the unplanned (but expected) work. For now, think big. Ignore the Epic's and focus on the Major Features.
+A Major Feature will be broken down into Epics and Issues. Each Issue will be assigned an Epic. There can even be an Epic called `Sprint 1 Unplanned Work` that will catch the unplanned (but expected) work. 
 
 ```puml
 @startmindmap
 +[#lightblue] System X
-++ FE-1 Major Feature
+++ Major Feature 1
 +++_ Epic-1 
 +++_ Epic-2
-++ FE-2 Major Feature
+++ Major Feature 2
 +++_ Epic-3
-++ FE-3 Major Feature
+++ Major Feature 3
 +++_ Epic-4
---[#orange] FE-5 Single sign-on
+--[#orange] Single sign-on
 ---_ Epic-5 SSO with Google
 ---_ Epic-6 SSO with Discord
 ---_ Epic-7 SSO with Facebook
--- FE-4 Major Feature
+-- Major Feature 4
 ---_ Epic-8
 @endmindmap
 ```
 
-Terminology:
-
-* **System X (Blue)** is the system that is being developed.
-* **Feature FE-1** is a major feature of the system.
-* **Sub-feature FE-1-1** is a sub-feature of the major feature FE-1. This is something we would call "An Epic".
+However, this will be performed later, after User Profile's have been investigated, and your team is populating the backlog. For now, think big. Ignore the Epic's and focus on the Major Features.
 
 
 [^0a1d1b]: Wiegers K. & Beatty J. *Software Requirements (3rd. ed.)*. Microsoft Press. 2013.

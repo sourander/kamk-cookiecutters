@@ -14,7 +14,9 @@ This is a guide for writing the User Profiles document. The template (or form) i
 
 ## Focus on User's needs
 
-Continuying with the airline example (see: [Vision and Scope guide](vision.md)), a user story might be a **"Check in for a flight"** task that the passenger wants to perform. The book by Wiegers and Betty puts it like this: *"Written as a user story, the same user requirement might read: "As a passenger, I want to check in for a flight so I can board my airplane."* [^0a1d1b]
+Continuying with the airline example (see: [Vision and Scope guide](vision.md)), a user story might be related to a **"Check in for a flight"** action that the passenger wants to perform. The book by Wiegers and Betty would frame that in a sentence like this: *"As a passenger, I want to check in for a flight so I can board my airplane."* [^0a1d1b]
+
+Notice the format:
 
 ```
 As a <type of user>, I want <some goal> so that <some reason>.
@@ -24,26 +26,9 @@ Use cases (and user stories from Agile world) are user-centric, not product-cent
 
 Here are some examples:
 
-* As a data scientist, I want to be able to upload a CSV file so that I can analyze the data.
-* As a data engineer, I want to be able to schedule a data pipeline so that I don't have to manually launch it.
+* As a data scientist, I want to be able to upload a CSV using Web UI so that I can add manual look-up data to the system.
+* As a data engineer, I want to be able to schedule a data pipeline using cron syntax so that I can reuse the same code among systems.
 * As a product owner, I want to be able to see the daily device registrations by country so that I can make data-driven decisions.
-
-### User Stories vs. Use Cases
-
-Something here.
-
-* Using the ("non-Agile") user case approach, we would:
-    - [x] Write user cases
-    - [x] Refine user cases based on discussions with the users
-    - [x] Write functional requirements
-    - [x] Define tests 
-* Using the ("Agile") user story approach, we would:
-    - [x] Write user stories
-    - [x] Refine user stories before the sprint
-    - [ ] Write functional requirements (OMITTED!)
-    - [x] Define acceptance tests
-
-These are two competing approaches. We will default to Agile/Scrum approches and terminology. Thus, we will **write user stories**. Also, we will **create Issues into Backlog** instead of writing functional requirements.
 
 ## User who?
 

@@ -1,12 +1,4 @@
-This will include the "How to read this tutorial" guide.
-
-## Document Guides and Forms
-
-!!! tip
-
-    You can treat Form and Template as synonyms. They are used interchangeably in this context.
-
-The guides and forms are located in the `docs/forms` and `docs/guides` folders. The guides provide context and ideas for writing the documents, and the forms are the documents themselves.
+The guides and forms are located in the `docs/forms` and `docs/guides` folders. The guides provide context and ideas for writing the documents, and the forms are the documents themselves. In this guide, the word *form* is a synonym for a *template*.
 
 * The forms are written in a way that they can be used as a template. 
 * The guides are written in a way that they can be used as a tutorial.
