@@ -45,8 +45,8 @@ At the end of the Sprint Zero, you should have something tangible to show to the
 - [ ] Write the Vision and Scope form.
 - [ ] Read the User Profiles guide.
 - [ ] Write the User Profiles form.
-- [ ] Read the User Requirements guide.
-- [ ] Write the User Requirements form.
+- [ ] Read The Spec guide.
+- [ ] Write The Spec form.
 - [ ] Delete the `docs/guides` folder.
 - [ ] Delete the Start Here document.
 - [ ] Continue your own documentation process (remember Diátaxis!)
