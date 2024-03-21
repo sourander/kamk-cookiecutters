@@ -29,67 +29,24 @@ Running the command above will prompt you to choose a cookiecutter from the list
 
 &nbsp;
 
-### Preparation step: Choose the Cookiecutter
+## Using Templates
 
-First, it will ask you to choose a cookiecutter from the list of available cookiecutters. These are the cookiecutters that are available in this repository. For this tutorial, **choose** the first one, **the learning diary**.
+### Oppimispäiväkirja (learning diary)
 
-```
-Select template:
-1 - Oppimispäiväkirja (MkDocs learning diary)
-2 - Project (MkDocs for project including ...)
-Choose from 1, 2 [1]:
-```
+![asciinema recording](doc-assets/cookiecutter.gif)
 
-**NOTE**: The Finnish word *oppimispäiväkirja* translates to *learning diary*. This is a Finnish word that is worth remembering if you are a student at KAMK.
+**TIP:** If you are interested in creating similar GIF animations, you can use tool `asciinema` for recording and `agg` for GIF conversion. The tools may not be compatible with Windows.
 
-**NOTE**: The cookiecutter might warn you: *"You've downloaded path/to/file before."* and wants you to confirm that you want to override the template with the latest version. You should answer `y` to this question.
+The steps and brief explanations are in the table below:
 
-&nbsp;
+| Step              | Explanation                                                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Select a template | Choose the cookiecutter from the list of available cookiecutters (check `cookiecutter.json`).                                 |
+| Course name       | Fill in the required fields. The default value is always shown in brackets.                                                   |
+| Course slug       | A slugified course name. Used in docker container names and similar. You typically do not need to change this.                |
+| Containing folder | The folder where the learning diary will be created. The default is the current folder (`.`). Default requires the `-f` flag. |
+| Author            | Your Full Name.                                                                                                               |
 
-### Steps 1-4: Fill in the required fields
+### Project
 
-Fill in the required fields. The default value is always shown in brackets. There are cases when the default value is ok, and cases when it is not. DO NOT SIMPLY PRESS ENTER. Always check the default value and change it if necessary.
-
-#### Step 1
-
-```
-[1/4] course_name (Linux Perusteet 2024):
-```
-
-Fill the course name. It will be used in various places, such as in the title of the learning diary. Prefer the name that is in the **syllabus** (fin: opinto-opas).
-
-#### Step 2:
-
-```
-[2/4] course_slug (whatever-you-typed-sluggiefied):
-```
-
-This step will show the **course name slug** for reference. You typically do not **need** to change this. It will be used in various places, such as for naming Docker images and containers. However, you **can change** this if you want to, but do not use any special characters or spaces.
-
-Example: If you typed `Käyttöjärjestelmäsuunnittelun alkeet 2025` to Step 1, this will offer you `kayttojarjestelmasuunnittelun-alkeet-2025` as the default value. You might prefer `kjs-alkeet-2025` for brevity.
-
-#### Step 3:
-
-```
-[3/4] containing_folder (.):
-```
-
-Now, you are asked into which folder you want to create the learning diary. The default value is `.` which means the current folder. If you choose the `.`, you **must** run the cookiecutter with the `-f` flag. If you want to create the learning diary into a new folder, you can type the name of the folder here. The folder will be created. 
-
-For example, you can type `diary` here and the files will be created into the `diary` folder.
-
-&nbsp;
-
-#### Step 4:
-    
-```
-[4/4] author (Lisa Johnson):
-```
-
-Fill your name. It will be used in various places, such in the MkDocs "Johdanto" (eng. Introduction) page.
-
-&nbsp;
-
-## Problems?
-
-If you have any problems, contact the course lecturer. You shouldn't need to use cookiecutter if not instructed to do so. The cookiecutter is typically used in the first lecture of the course. Be sure to attend the first lecture.
+TODO: Record this GIF.

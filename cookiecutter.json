@@ -8,7 +8,7 @@
         "project": {
             "path": "./project",
             "title": "Project",
-            "description": "MkDocs for project including requirements specification, user stories, and other project documentation."
+            "description": "MkDocs project documentation (Vision & Scope etc.)"
         }
     }
 }
