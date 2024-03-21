@@ -1,2 +1,5 @@
 # Python for local development
 .venv/
+
+# MAC files
+.DS_Store
