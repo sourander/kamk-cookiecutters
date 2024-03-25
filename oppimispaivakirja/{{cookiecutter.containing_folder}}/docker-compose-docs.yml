@@ -1,11 +1,11 @@
 version: '3'
 
-name: {{ cookiecutter.course_slug }}-mkdocs
+name: {{ cookiecutter.course_slug }}-{{cookiecutter.__uniqueness_id}}-mkdocs
 
 services:
-  {{ cookiecutter.course_slug }}-service:
-    container_name: {{ cookiecutter.course_slug }}-container
-    image: kamk/{{ cookiecutter.course_slug }}-diary:latest
+  {{ cookiecutter.__uniqueness_id }}-service:
+    container_name: {{ cookiecutter.__uniqueness_id }}-container
+    image: kamk/{{ cookiecutter.__uniqueness_id }}-diary:latest
     build:
       context: .
       dockerfile: docs.Dockerfile
