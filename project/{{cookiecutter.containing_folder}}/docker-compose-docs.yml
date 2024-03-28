@@ -3,7 +3,7 @@ version: '3'
 name: "{{cookiecutter.__course_slug + '-' + cookiecutter.__uniqueness_id}}"
 
 services:
-  {{ cookiecutter.__uniqueness_id }}-mkdocs:
+  mkdocs:
     container_name: "{{cookiecutter.__uniqueness_id}}-mkdocs"
     image: kamk/{{cookiecutter.__uniqueness_id}}-report:latest
     build:
@@ -16,10 +16,10 @@ services:
     working_dir: /docs
     command: ["serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]
     depends_on:
-      - {{ cookiecutter.__uniqueness_id }}-puml
+      - puml
     networks:
       - {{ cookiecutter.__uniqueness_id }}_network
-  {{ cookiecutter.__uniqueness_id }}-puml:
+  puml:
     container_name: "{{ cookiecutter.__uniqueness_id }}-puml"
     image: plantuml/plantuml-server:latest
     networks:

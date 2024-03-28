@@ -39,7 +39,7 @@ plugins:
   - search
   # PlantUML support using the Docker container
   - plantuml:
-      puml_url: "http://{{ cookiecutter.__uniqueness_id }}-puml:8080"
+      puml_url: "http://puml:8080"
       num_workers: 4
 
 copyright: |

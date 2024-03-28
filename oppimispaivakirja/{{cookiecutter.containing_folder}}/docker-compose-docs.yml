@@ -3,7 +3,7 @@ version: '3'
 name: {{ cookiecutter.course_slug }}-{{cookiecutter.__uniqueness_id}}-mkdocs
 
 services:
-  {{ cookiecutter.__uniqueness_id }}-service:
+  mkdocs:
     container_name: {{ cookiecutter.__uniqueness_id }}-container
     image: kamk/{{ cookiecutter.__uniqueness_id }}-diary:latest
     build:
