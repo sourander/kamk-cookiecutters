@@ -21,7 +21,11 @@ pipx install mkdocs
 pipx inject mkdocs mkdocs-material
 pipx inject mkdocs mkdocs-awesome-pages-plugin
 
-# Run
-cd $YOUR_PROJECT_DIR
+# Navigate to the directory containing
+# the mkdocs.yml file
+cd $YOUR_PROJECT_DIR/docs
+
+# Serve the documentation
+# Exits with Ctrl+C
 mkdocs serve # [-a 0.0.0.0:8888]
 ```
