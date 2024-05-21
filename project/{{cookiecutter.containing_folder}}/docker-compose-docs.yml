@@ -1,5 +1,3 @@
-version: '3'
-
 name: "{{cookiecutter.__course_slug + '-' + cookiecutter.__uniqueness_id}}"
 
 services:

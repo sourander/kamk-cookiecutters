@@ -1,5 +1,3 @@
-version: '3'
-
 name: {{ cookiecutter.course_slug }}-{{cookiecutter.__uniqueness_id}}-mkdocs
 
 services:
