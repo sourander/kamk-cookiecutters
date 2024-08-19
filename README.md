@@ -31,6 +31,11 @@ Running the command above will prompt you to choose a cookiecutter from the list
 
 ## Using Templates
 
+When launching the `cookiecutter` command, you will be prompted to choose a cookiecutter from the list of available cookiecutters. The available cookiecutters are:
+
+1. Oppimispäiväkirja (a learning diary)
+2. Project (a project documentation)
+
 ### Oppimispäiväkirja (learning diary)
 
 ![asciinema recording](doc-assets/cookiecutter.gif)
@@ -39,14 +44,29 @@ Running the command above will prompt you to choose a cookiecutter from the list
 
 The steps and brief explanations are in the table below:
 
-| Step              | Explanation                                                                                                                   |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Select a template | Choose the cookiecutter from the list of available cookiecutters (check `cookiecutter.json`).                                 |
-| Course name       | Fill in the required fields. The default value is always shown in brackets.                                                   |
-| Course slug       | A slugified course name. Used in docker container names and similar. You typically do not need to change this.                |
-| Containing folder | The folder where the learning diary will be created. The default is the current folder (`.`). Default requires the `-f` flag. |
-| Author            | Your Full Name.                                                                                                               |
+| Step              | Explanation                                                                       |
+| ----------------- | --------------------------------------------------------------------------------- |
+| Select a template | 1                                                                                 |
+| Course name       | The name of the course you are in. The default value is always shown in brackets. |
+| Course slug       | A slugified course name. You typically do not need to change this.                |
+| Containing folder | The default is the current folder (`.`). Default requires the `-f` flag.          |
+| Author            | Your Full Name.                                                                   |
+
+How to write a learning diary? Read from [Oppimispäiväkirja 101](https://sourander.github.io/oat) (in Finnish).
 
 ### Project
 
-TODO: Record this GIF.
+![asciinema recording](doc-assets/project-cookie.gif)
+
+The steps and brief explanations are in the table below:
+
+| Step              | Explanation                                                                 |
+| ----------------- | --------------------------------------------------------------------------- |
+| Select a template | 2                                                                           |
+| Course name       | The name of the course you are in.                                          |
+| Group name        | The name of the group you are in.                                           |
+| Project name      | The name of the project your group is building.                             |
+| Project slug      | A slugified project name. Only use a-z and dash. No whitespace, no symbols. |
+| Containing folder | The default is the current folder (`.`). Default requires the `-f` flag.    |
+
+How to write a project documentation? The template itself includes a guide for this! Also, the introduction lesson of the course will guide you through the process. If not, ask your teacher.
