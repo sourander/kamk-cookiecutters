@@ -32,6 +32,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 plugins:
   # Navigation page ordering
