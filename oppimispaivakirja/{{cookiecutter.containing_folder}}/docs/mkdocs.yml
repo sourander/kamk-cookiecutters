@@ -22,6 +22,10 @@ markdown_extensions:
   # Checkboxes
   - pymdownx.tasklist:
       custom_checkbox: true
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 plugins:
   # Navigation page ordering
