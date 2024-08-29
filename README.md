@@ -16,10 +16,10 @@ If you have no idea of what cookiecutter is, spend 1-2 minutes reading this shor
 ## Usage
 
 ```bash
-# Run the cookiecutter against this repository
-cookiecutter gh:sourander/kamk-cookiecutters
+# Git Bash in Windows
+winpty cookiecutter gh:sourander/kamk-cookiecutters -f
 
-# Or maybe (Read below):
+# Actual Bash in Linux/MacOS
 cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
