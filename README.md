@@ -4,16 +4,35 @@ Various cookiecutters for creating course-related files and directories.
 
 ## Prerequisites
 
-* (Recommended) [pipx](https://pipx.pypa.io/stable/installation/)
-* (Mandatory) [cookiecutter 2.5.0 or higher](https://cookiecutter.readthedocs.io/en/latest/installation.html)
+* For Option A:
+    * Docker
+* For option B:
+    * (Recommended) [pipx](https://pipx.pypa.io/stable/installation/)
+    * (Mandatory) [cookiecutter 2.5.0 or higher](https://cookiecutter.readthedocs.io/en/latest/installation.html)
 
 If you have no idea what pipx is, it is shortly a tool for creating isolated Python environments for command-line tools such as `cookiecutter`, `http`, `poetry`, and many others. It is a good practice to use pipx for installing these tools, because it keeps your system clean and you can easily uninstall the tools if you want to. Also, it allows you to run them in any directory without activating a virtual environment. In this context, **it is used to install** the `cookiecutter` tool.
 
 If you have no idea of what cookiecutter is, spend 1-2 minutes reading this short documentation page: [Cookiecutter docs: Overview](https://cookiecutter.readthedocs.io/en/latest/overview.html).
 
-&nbsp;
-
 ## Usage
+
+### Option A: Usage with Docker
+
+If you do not have a cookiecutter installed, you can use the following Docker command to create a new project:
+
+```bash
+docker run -it --rm \
+-v "$(pwd):/workspace" \
+-w /workspace \
+ghcr.io/astral-sh/uv:python3.11-bookworm \
+uvx cookiecutter gh:sourander/kamk-cookiecutters -f
+```
+
+NOTE! The command has only been tested in macOS and Linux. You may have to tweak it a bit to work in Git Bash (in Windows). Most probably, you will need to add `winpty` before `docker`.
+
+### Option B: Usage with cookiecutter
+
+If you have a locally installed cookiecutter, version 2.6.0 or higher, you can use the following command to create a new project:
 
 ```bash
 # Git Bash in Windows
@@ -23,7 +42,9 @@ winpty cookiecutter gh:sourander/kamk-cookiecutters -f
 cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
-**WHY THE F FLAG?** The `-f` flag is used to force the cookiecutter to override the existing files. This is required if you want to use the `.` as the target folder, because "this folder" exists.
+### Why the `-f` flag?
+
+The `-f` flag is used to force the cookiecutter to override the existing files. This is required if you want to use the `.` as the target folder, because "this folder" exists.
 
 Running the command above will prompt you to choose a cookiecutter from the list of available cookiecutters. After choosing a cookiecutter, you will be prompted to fill in the required fields. Below is an example of creating a learning diary for a course.
 
