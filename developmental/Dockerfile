@@ -24,8 +24,6 @@ COPY ./project /templates/project
 
 # Copy the entrypoint script
 COPY ./developmental/bootstrap.sh /bootstrap.sh
-
-# Make the entrypoint script executable
 RUN chmod +x /bootstrap.sh
 
 # Set the entrypoint

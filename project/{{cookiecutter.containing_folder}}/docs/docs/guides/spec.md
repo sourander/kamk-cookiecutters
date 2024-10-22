@@ -51,22 +51,22 @@ A pure waterfall approach includes the assumption that most of the communication
     end
 
     subgraph Functional Requirements for N1
-        N1.1[1. The system shall display active boarding passes]
-        N1.2[2. The user shall be able to view boarding pass details]
-        N1.3[3. The user shall be able to check in for a flight]
+        N1.1[The system shall display active boarding passes]
+        N1.2[The user shall be able to view boarding pass details]
+        N1.3[The user shall be able to check in for a flight]
     end
 
     subgraph Functional Requirements for M1
-        M1.1[1. ...]
-        M1.2[2. ...]
+        M1.1[...]
+        M1.2[...]
     end
 
     subgraph Functional Requirements for M2
-        M2.1[1. ...]
+        M2.1[...]
     end
 
     subgraph Functional Requirements for M3
-        M3.1[1. ...]
+        M3.1[...]
     end
 
     A --> N1

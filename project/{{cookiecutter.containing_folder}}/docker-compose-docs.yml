@@ -3,7 +3,6 @@ name: "{{cookiecutter.__course_slug + '-' + cookiecutter.__uniqueness_id}}"
 services:
   mkdocs:
     container_name: "{{cookiecutter.__uniqueness_id}}-mkdocs"
-    image: kamk/{{cookiecutter.__uniqueness_id}}-report:latest
     build:
       context: .
       dockerfile: docs.Dockerfile
@@ -19,7 +18,6 @@ services:
       - {{ cookiecutter.__uniqueness_id }}_network
   puml:
     container_name: "{{ cookiecutter.__uniqueness_id }}-puml"
-    image: plantuml/plantuml-server:latest
     networks:
       - {{ cookiecutter.__uniqueness_id }}_network
 
