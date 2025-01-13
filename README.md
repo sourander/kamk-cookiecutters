@@ -4,21 +4,15 @@ Various cookiecutters for creating course-related files and directories.
 
 ## Prerequisites
 
-* For Option A:
-    * Docker
-* For option B:
-    * (Recommended) [pipx](https://pipx.pypa.io/stable/installation/)
-    * (Mandatory) [cookiecutter 2.5.0 or higher](https://cookiecutter.readthedocs.io/en/latest/installation.html)
-
-If you have no idea what pipx is, it is shortly a tool for creating isolated Python environments for command-line tools such as `cookiecutter`, `http`, `poetry`, and many others. It is a good practice to use pipx for installing these tools, because it keeps your system clean and you can easily uninstall the tools if you want to. Also, it allows you to run them in any directory without activating a virtual environment. In this context, **it is used to install** the `cookiecutter` tool.
+* Docker (Desktop)
 
 If you have no idea of what cookiecutter is, spend 1-2 minutes reading this short documentation page: [Cookiecutter docs: Overview](https://cookiecutter.readthedocs.io/en/latest/overview.html).
 
 ## Usage
 
-### Option A: Usage with Docker
+We will use Docker to run the cookiecutter command, utilizing **uvx** (an alias for `uv tool run`). The uv is a Python package installer. The command `uv tool` is an interface for running Python-based tools without installation. We will run uv in a Docker container, so the is no need to even install uv. 
 
-If you do not have a cookiecutter installed, you can use the following Docker command to create a new project:
+#### 🐧 Linux / MacOS
 
 ```bash
 docker run -it --rm \
@@ -28,18 +22,25 @@ ghcr.io/astral-sh/uv:python3.11-bookworm \
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
-NOTE! The command has only been tested in macOS and Linux. You may have to tweak it a bit to work in Git Bash (in Windows). Most probably, you will need to add `winpty` before `docker`.
-
-### Option B: Usage with cookiecutter
-
-If you have a locally installed cookiecutter, version 2.6.0 or higher, you can use the following command to create a new project:
+#### 🐦 Git Bash (in Windows)
 
 ```bash
-# Git Bash in Windows
-winpty cookiecutter gh:sourander/kamk-cookiecutters -f
+winpty docker run -it --rm \
+-v "/$(pwd):/workspace" \
+-w '//workspace' \
+ghcr.io/astral-sh/uv:python3.11-bookworm \
+uvx cookiecutter gh:sourander/kamk-cookiecutters -f
+```
 
-# Actual Bash in Linux/MacOS
-cookiecutter gh:sourander/kamk-cookiecutters -f
+
+#### 🟦 PowerShell
+
+```powershell
+docker run -it --rm `
+-v "${PWD}:/workspace" `
+-w /workspace `
+ghcr.io/astral-sh/uv:python3.11-bookworm `
+uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
 ### Why the `-f` flag?
