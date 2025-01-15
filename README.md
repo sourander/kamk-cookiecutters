@@ -22,6 +22,8 @@ ghcr.io/astral-sh/uv:python3.11-bookworm \
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
+🔑 Running as sudo? Read more below. [^1]
+
 #### 🐦 Git Bash (in Windows)
 
 ```bash
@@ -92,3 +94,7 @@ The steps and brief explanations are in the table below:
 | Containing folder | The default is the current folder (`.`). Default requires the `-f` flag.    |
 
 How to write a project documentation? The template itself includes a guide for this! Also, the introduction lesson of the course will guide you through the process. If not, ask your teacher.
+
+## Footnotes
+
+[^1]: Running as sudo? They may be reasons to run the command with `sudo` (e.g., permission issues in a classroom or in a lab space). You will identify this by the error message `Permission denied` to a socker `/var/run/docker.sock`. Running the command again with `sudo` prefix will solve the issue partly. If you do this, the command will work, and template files will be created into your current directory, but the created files will be owned by root. To fix this, you can change ownership like this: `sudo chown -R $(id -u):$(id -g) .`
