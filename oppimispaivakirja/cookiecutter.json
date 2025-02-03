@@ -8,8 +8,8 @@
     
     "author": "Lisa Johnson",
 
-    "__week_nro": "{% now 'utc', '%W' %}",
-    "__week_nro_plus": "{% now 'utc' + 'days=7', '%W' %}",
+    "__week_nro": "{% now 'utc', '%V' %}",
+    "__week_nro_plus": "{{ (cookiecutter.__week_nro | int) + 1 }}",
     "__year_nro": "{% now 'utc', '%Y' %}",
     "__uniqueness_id": "{{ random_ascii_string(6) | lower }}"
 }
