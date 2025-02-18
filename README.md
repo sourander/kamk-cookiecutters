@@ -103,9 +103,8 @@ How to write a project documentation? The template itself includes a guide for t
 
 <details>
 <summary><strong>Itsearviointi (self-evaluation)</strong></summary>
-### Itsearviointi (self-evaluation)
 
-This lacks the GIF-animation, since the process is similar to the previous ones.
+The Itsearviointi example lacks the GIF-animation, since the process is similar to the previous ones. If you want to see what the Cookiecutter-prompting process looks like, check either of the previous examples. The questions and their descriptions are in the table below:
 
 | Step              | Explanation                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
