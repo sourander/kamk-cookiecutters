@@ -1,0 +1,9 @@
+# A .pages file in any folder can be used to set the ordering
+# in the navigation. Use the "..." to include all (other) pages.
+# If the file does not exist, the default ordering is alphabetical.
+
+nav:
+  - index.md
+  - planning.md
+  - ...
+  - conclusion.md

@@ -1,0 +1,13 @@
+{
+    "_extensions": ["cookiecutter.extensions.SlugifyExtension", "cookiecutter.extensions.TimeExtension"],
+    
+    "course_name": "Linux Palvelimena 2025",
+    "course_slug": "{{ cookiecutter.course_name | slugify }}",
+    
+    "containing_folder": ".",
+    
+    "author": "Lisa Johnson",
+
+    "__week_nro": "{% now 'utc', '%V' %}",
+    "__uniqueness_id": "{{ random_ascii_string(6) | lower }}"
+}

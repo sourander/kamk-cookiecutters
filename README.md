@@ -64,6 +64,8 @@ When launching the `cookiecutter` command, you will be prompted to choose a cook
 
 ![asciinema recording](doc-assets/cookiecutter.gif)
 
+**Animaatio 1:** *Oppimispäiväkirja -mallin valinta ja täyttö.*
+
 **TIP:** If you are interested in creating similar GIF animations, you can use tool `asciinema` for recording and `agg` for GIF conversion. The tools may not be compatible with Windows.
 
 The steps and brief explanations are in the table below:
@@ -82,6 +84,8 @@ How to write a learning diary? Read from [Oppimispäiväkirja 101](https://soura
 
 ![asciinema recording](doc-assets/project-cookie.gif)
 
+**Animaatio 1:** *Projekti -mallin valinta ja täyttö.*
+
 The steps and brief explanations are in the table below:
 
 | Step              | Explanation                                                                 |
@@ -89,11 +93,26 @@ The steps and brief explanations are in the table below:
 | Select a template | 2                                                                           |
 | Course name       | The name of the course you are in.                                          |
 | Group name        | The name of the group you are in.                                           |
+| Group authors     | The names of the group members. Separate with a comma.                      |
 | Project name      | The name of the project your group is building.                             |
 | Project slug      | A slugified project name. Only use a-z and dash. No whitespace, no symbols. |
 | Containing folder | The default is the current folder (`.`). Default requires the `-f` flag.    |
 
 How to write a project documentation? The template itself includes a guide for this! Also, the introduction lesson of the course will guide you through the process. If not, ask your teacher.
+
+### Itsearviointi (self-evaluation)
+
+This lacks the GIF-animation, since the process is similar to the previous ones.
+
+| Step              | Explanation                                                              |
+| ----------------- | ------------------------------------------------------------------------ |
+| Select a template | 3                                                                        |
+| Course name       | The name of the course you are in.                                       |
+| Course slug       | A slugified course name. You typically do not need to change this.       |
+| Containing folder | The default is the current folder (`.`). Default requires the `-f` flag. |
+| Author            | Your Full Name.                                                          |
+
+
 
 ## Footnotes
 

@@ -8,7 +8,12 @@
         "project": {
             "path": "./project",
             "title": "Project",
-            "description": "MkDocs project documentation (Vision & Scope etc.)"
+            "description": "Project documentation (Vision & Scope etc.)"
+        },
+        "itsearviointi": {
+            "path": "./itsearviointi",
+            "title": "Itsearviointi",
+            "description": "Self-assessment for mini projects and similar."
         }
     }
 }

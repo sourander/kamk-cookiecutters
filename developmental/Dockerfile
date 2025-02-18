@@ -21,6 +21,7 @@ RUN mkdir -p /templates
 # Copy the template files into the image
 COPY ./oppimispaivakirja /templates/oppimispaivakirja
 COPY ./project /templates/project
+COPY ./itsearviointi /templates/itsearviointi
 
 # Copy the entrypoint script
 COPY ./developmental/bootstrap.sh /bootstrap.sh
