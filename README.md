@@ -55,12 +55,10 @@ Running the command above will prompt you to choose a cookiecutter from the list
 
 ## Using Templates
 
-When launching the `cookiecutter` command, you will be prompted to choose a cookiecutter from the list of available cookiecutters. The available cookiecutters are:
+When launching the `cookiecutter` command, you will be prompted to choose a cookiecutter from the list of available cookiecutters. The available cookiecutters are described below. Click to open.
 
-1. Oppimispäiväkirja (a learning diary)
-2. Project (a project documentation)
-
-### Oppimispäiväkirja (learning diary)
+<details>
+<summary><strong>Oppimispäiväkirja (learning diary)</strong></summary>
 
 ![asciinema recording](doc-assets/cookiecutter.gif)
 
@@ -79,8 +77,10 @@ The steps and brief explanations are in the table below:
 | Author            | Your Full Name.                                                                   |
 
 How to write a learning diary? Read from [Oppimispäiväkirja 101](https://sourander.github.io/oat) (in Finnish).
+</details>
 
-### Project
+<details>
+<summary><strong>Project</strong></summary>
 
 ![asciinema recording](doc-assets/project-cookie.gif)
 
@@ -99,7 +99,10 @@ The steps and brief explanations are in the table below:
 | Containing folder | The default is the current folder (`.`). Default requires the `-f` flag.    |
 
 How to write a project documentation? The template itself includes a guide for this! Also, the introduction lesson of the course will guide you through the process. If not, ask your teacher.
+</details>
 
+<details>
+<summary><strong>Itsearviointi (self-evaluation)</strong></summary>
 ### Itsearviointi (self-evaluation)
 
 This lacks the GIF-animation, since the process is similar to the previous ones.
@@ -112,6 +115,7 @@ This lacks the GIF-animation, since the process is similar to the previous ones.
 | Containing folder | The default is the current folder (`.`). Default requires the `-f` flag. |
 | Author            | Your Full Name.                                                          |
 
+</details>
 
 
 ## Footnotes
