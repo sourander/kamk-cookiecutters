@@ -35,6 +35,9 @@ docker compose up -d
 If you have uv(x) installed, you can run the documentation without Docker.
 
 ```bash
+# Go to the same directory as mkdocs.yml
+cd docs
+
 # Run with uvx
 uvx --with mkdocs-material --with mkdocs-awesome-pages-plugin mkdocs serve
 ```
