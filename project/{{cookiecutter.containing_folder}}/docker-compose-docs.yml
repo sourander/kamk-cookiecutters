@@ -17,6 +17,7 @@ services:
     networks:
       - {{ cookiecutter.__uniqueness_id }}_network
   puml:
+    image: plantuml/plantuml-server:latest
     container_name: "{{ cookiecutter.__uniqueness_id }}-puml"
     networks:
       - {{ cookiecutter.__uniqueness_id }}_network
