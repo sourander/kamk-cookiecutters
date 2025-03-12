@@ -1,0 +1,16 @@
+services:
+  oat-cookie-serve:
+    build:
+      context: .
+      dockerfile: developmental/Dockerfile
+      args:
+        - KAMK_CUTTER=${KAMK_CUTTER:-oppimispaivakirja}
+    ports:
+      - "8000:8000"
+    environment:
+      - TEMPLATE_NAME=${KAMK_CUTTER:-oppimispaivakirja}
+    develop:
+      watch:
+        - action: rebuild
+          path: ./${KAMK_CUTTER:-oppimispaivakirja}
+          target: /app/templates/${KAMK_CUTTER:-oppimispaivakirja}

@@ -1,31 +1,21 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11-slim
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm
 
-# ... since this wouldn't allow copying bootstrap.sh to /bootstrap.sh
-# FROM squidfunk/mkdocs-material:latest
+# This points to oppimispaivakirja, project, ... kamk-cookiecutter template
+ARG KAMK_CUTTER=oppimispaivakirja
 
-# Set the working directory to /app
-WORKDIR /app
+RUN uv tool install cookiecutter
+RUN uv tool install mkdocs --with mkdocs-material --with mkdocs-awesome-pages-plugin
 
-# The same command but broken into multi-line
-RUN pip install --no-cache-dir \
-     mkdocs \
-     mkdocs-material \
-     cookiecutter \
-     mkdocs-awesome-pages-plugin \
-     mkdocs_puml
+# Copy the chosen cookiecutter template to templates dir
+COPY ./${KAMK_CUTTER} /templates/${KAMK_CUTTER}
 
-# Create a directory for templates
-RUN mkdir -p /templates
+# Run in 
+WORKDIR /app/${KAMK_CUTTER}
+RUN echo "Running cookiecutter with ${KAMK_CUTTER} template"
+RUN uvx cookiecutter /templates/${KAMK_CUTTER} --no-input -o . -f && \
+    mkdir -p /app/${KAMK_CUTTER}/docs
 
-# Copy the template files into the image
-COPY ./oppimispaivakirja /templates/oppimispaivakirja
-COPY ./project /templates/project
-COPY ./itsearviointi /templates/itsearviointi
-
-# Copy the entrypoint script
-COPY ./developmental/bootstrap.sh /bootstrap.sh
-RUN chmod +x /bootstrap.sh
-
-# Set the entrypoint
-ENTRYPOINT ["/bootstrap.sh"]
+# Run where mkdocs.yml is located
+WORKDIR /app/${KAMK_CUTTER}/docs
+CMD [ "uv", "tool", "run", "mkdocs", "serve", "-a", "0.0.0.0:8000" ]

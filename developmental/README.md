@@ -2,24 +2,29 @@
 
 To develop the scripts, you need to run the templates through the cookiecutter processor. This would be annoying manually, so we are using Docker for that. Run the following commands in the project root:
 
-## Oppimispäiväkirja
+## Using Makefile
 
 ```bash
-# Start
-docker compose -f docker-compose-oat.yml up --build
+# Start oppimispaivakirja by default
+make start
 
-# Stop
-docker compose -f docker-compose-oat.yml down
+# Start specific
+make start cookie=oppimispaivakirja
+make start cookie=project
+make start cookie=itsearviointi
 ```
 
-## Project
-
-The project is nearly identical to the learning diary, but it has http://puml:8080/ server for PlantUML diagrams.
+## Oppimispäiväkirja with Docker
 
 ```bash
-# Start
-docker compose -f docker-compose-project.yml up --build
+# Start oppimispaivakirja by default
+docker compose up -watch
 
-# Stop
-docker compose -f docker-compose-project.yml down
+# Start specific
+KAMK_CUTTER=oppimispaivakirja docker compose up --watch
+KAMK_CUTTER=project docker compose up --watch
+KAMK_CUTTER=itsearviointi docker compose up --watch
+
+# Stop whatever template is running
+docker compose down
 ```

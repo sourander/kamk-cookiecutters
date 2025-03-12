@@ -1,0 +1,20 @@
+stages:
+  - deploy # Mandatory name for the stage to GitLab detect it's a Pages deployment
+
+# Pages Deployment
+pages:
+  tags:
+    - dind
+  stage: deploy
+  # Debian 12 (Bookworm), LTS till 2028, with uv package manager
+  image: ghcr.io/astral-sh/uv:python3.12-bookworm
+  script: 
+    - uv sync --directory "docs"
+    - uv run --directory "docs" mkdocs build --strict --verbose --site-dir "../public"
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week                                   # Optional, to prevent long storage retention
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH       # Deploy only on main branch
+

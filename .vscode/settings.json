@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "**/*.toml": "jinja-toml",
+    "**/docker-compose-docs.yml": "jinja-yaml"
+  }
+}
