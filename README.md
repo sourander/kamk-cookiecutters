@@ -12,6 +12,18 @@ If you have no idea of what cookiecutter is, spend 1-2 minutes reading this shor
 
 We will use Docker to run the cookiecutter command, utilizing **uvx** (an alias for `uv tool run`). The uv is a Python package installer. The command `uv tool` is an interface for running Python-based tools without installation. We will run uv in a Docker container, so the is no need to even install uv. 
 
+&nbsp;
+
+#### 🐍 uv (Any OS)
+
+If you **do have** the actual uv (and uvx) installed, the command will be super short and it will also handle line-endings according to your OS without any extra steps. If not, use Docker as described below.
+
+```bash
+uvx cookiecutter gh:sourander/kamk-cookiecutters -f
+```
+
+&nbsp;
+
 #### 🐧 Linux / MacOS
 
 ```bash
@@ -24,7 +36,9 @@ uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 
 🔑 Running as sudo? Read more below. [^1]
 
-#### 🐦 Git Bash (in Windows)
+&nbsp;
+
+#### 🔷 Git Bash (in Windows)
 
 ```bash
 winpty docker run -it --rm \
@@ -34,8 +48,17 @@ ghcr.io/astral-sh/uv:python3.11-bookworm \
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
+Then, fix line endings:
 
-#### 🟦 PowerShell
+```bash
+find . -type f ! -path "./.git/*" -exec unix2dos {} \;
+```
+
+&nbsp;
+
+#### 🟦 PowerShell 7.x
+
+Important! The CRLF-fixing command will only work on *actual* PowerShell 7.x. The Windows Terminal is not enough. That will add some nonsense UTF-8 BOM encoding to the files. You do not want this. If you are a PowerShell, start using the PowerShell 7.x instead of the legacy Windows PowerShell that OS ships with.
 
 ```powershell
 docker run -it --rm `
@@ -44,6 +67,16 @@ docker run -it --rm `
 ghcr.io/astral-sh/uv:python3.11-bookworm `
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
+
+And then, fix line endings:
+
+```powershell
+Get-ChildItem -Recurse -File -Path . -Exclude .git | ForEach-Object {
+    (Get-Content $_.FullName) | Set-Content $_.FullName
+}
+```
+
+&nbsp;
 
 ### Why the `-f` flag?
 
