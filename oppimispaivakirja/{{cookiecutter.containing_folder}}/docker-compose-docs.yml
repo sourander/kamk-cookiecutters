@@ -2,7 +2,7 @@ name: {{ cookiecutter.course_slug ~ ' - ' ~ cookiecutter.__uniqueness_id ~ ' - m
 
 services:
   mkdocs:
-    container_name: {{ cookiecutter.__uniqueness_id ~ ' -container' }}
+    container_name: {{ cookiecutter.__uniqueness_id ~ '-container' }}
     build:
       context: .
       dockerfile: docs.Dockerfile
