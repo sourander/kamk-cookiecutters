@@ -7,9 +7,6 @@
     "containing_folder": ".",
     
     "author": "Lisa Johnson",
-    "line_endings": ["windows", "unix"],
-
-    "_new_lines": "{{ '\\r\\n' if cookiecutter.os == 'windows' else '\\n' }}",
 
     "__week_nro": "{% now 'utc', '%V' %}",
     "__week_nro_plus": "{{ '%02d' | format((cookiecutter.__week_nro | int) + 1) }}",
