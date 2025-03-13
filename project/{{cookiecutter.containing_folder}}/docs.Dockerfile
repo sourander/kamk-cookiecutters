@@ -1,7 +1,11 @@
-FROM squidfunk/mkdocs-material:latest
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm
 
-# Install additional packages
-RUN pip install mkdocs-awesome-pages-plugin mkdocs_puml
+# The ./docs/mkdocs.yml will end up in /docs/mkdocs.yml etc.
+COPY docs /docs
+WORKDIR /docs
 
-# Copy the contents of the local "docs" directory into the container
-COPY ./docs /docs
+# Install what is mentioned in pyproject.toml
+RUN uv sync
+
+# Default command will run the mkdocs server
+CMD ["uv", "run", "mkdocs", "serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]

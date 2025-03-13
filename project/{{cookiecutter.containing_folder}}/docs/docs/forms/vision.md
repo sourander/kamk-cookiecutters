@@ -52,7 +52,7 @@ A list of features can be found in this section. A feature is a section of softw
 
 !!! tip
 
-    Consider adding a feature tree or a mind map here. This can help to visualize the features and their relationships. Check the example in the ["What is a Feature?"](../guides/vision.md#what-is-a-feature) section in the Vision and Scope guide.
+    Consider adding a feature tree or a mind map here. This can help to visualize the features and their relationships. Check the example in the ["What is a Feature?"](../guides/vision.md#what-is-a-major-feature) section in the Vision and Scope guide.
 
 
 ### 2.4 Features that will not be developed

@@ -2,7 +2,7 @@
     "_extensions": ["cookiecutter.extensions.SlugifyExtension", "cookiecutter.extensions.TimeExtension"],
     
     "course_name": "Asiakasprojekti 2",
-    "__course_slug": "{{ cookiecutter.course_name | slugify }}",
+    "course_slug": "{{ cookiecutter.course_name | slugify }}",
 
     "group_name": "Team True Hackers",
     "group_authors": "Lisa Johnson, John Doe, Comma Separated",

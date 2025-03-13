@@ -96,23 +96,22 @@ Below are some examples of features, some of which may be suitable for a vehicle
 
 A Major Feature will be broken down into Epics and Issues. Each Issue will be assigned an Epic. There can even be an Epic called `Sprint 1 Unplanned Work` that will catch the unplanned (but expected) work. 
 
-```puml
-@startmindmap
-+[#lightblue] System X
-++ Major Feature 1
-+++_ Epic-1 
-+++_ Epic-2
-++ Major Feature 2
-+++_ Epic-3
-++ Major Feature 3
-+++_ Epic-4
---[#orange] Single sign-on
----_ Epic-5 SSO with Google
----_ Epic-6 SSO with Discord
----_ Epic-7 SSO with Facebook
--- Major Feature 4
----_ Epic-8
-@endmindmap
+```mermaid
+mindmap
+  root((System X))
+    Major Feature 1
+      Epic-1
+      Epic-2
+    Major Feature 2
+      Epic-3
+    Major Feature 3
+      Epic-4
+    Single Sign-On
+      Epic-5 SSO with Google
+      Epic-6 SSO with Discord
+      Epic-7 SSO with Facebook
+    Major Feature 4
+      Epic-8
 ```
 
 However, this will be performed later, after User Profile's have been investigated, and your team is populating the backlog. For now, think big. Ignore the Epic's and focus on the Major Features.

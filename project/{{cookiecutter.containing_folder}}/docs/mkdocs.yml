@@ -19,7 +19,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # Checkboxes
+        !!python/name:material.extensions.emoji.to_svg 
+  # Checkboxes
   - pymdownx.tasklist:
       custom_checkbox: true
   # Admonitions
@@ -32,19 +33,12 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  # Admonitions
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+
 
 plugins:
   # Navigation page ordering
   - awesome-pages
   - search
-  # PlantUML support using the Docker container
-  - plantuml:
-      puml_url: "http://puml:8080"
-      num_workers: 4
 
 copyright: |
   Copyrighted to the {{ cookiecutter.group_name }} team members at KAMK in {{ cookiecutter.__year_nro }}.

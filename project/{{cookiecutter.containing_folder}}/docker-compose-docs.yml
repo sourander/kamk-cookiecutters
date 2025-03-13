@@ -1,8 +1,8 @@
-name: "{{cookiecutter.__course_slug + '-' + cookiecutter.__uniqueness_id}}"
+name: {{ cookiecutter.course_slug ~ '-' ~ cookiecutter.__uniqueness_id ~ '-mkdocs' }}
 
 services:
   mkdocs:
-    container_name: "{{cookiecutter.__uniqueness_id}}-mkdocs"
+    container_name: {{ cookiecutter.__uniqueness_id ~ '-container' }}
     build:
       context: .
       dockerfile: docs.Dockerfile
@@ -10,18 +10,6 @@ services:
       - "8000:8000"
     volumes:
       - ./docs:/docs
+      - /docs/.venv # Avoid mounting the venv to the host
     working_dir: /docs
-    command: ["serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]
-    depends_on:
-      - puml
-    networks:
-      - {{ cookiecutter.__uniqueness_id }}_network
-  puml:
-    image: plantuml/plantuml-server:latest
-    container_name: "{{ cookiecutter.__uniqueness_id }}-puml"
-    networks:
-      - {{ cookiecutter.__uniqueness_id }}_network
-
-networks:
-    {{ cookiecutter.__uniqueness_id }}_network:
-        name: {{ cookiecutter.__uniqueness_id }}_network
+    command: ["uv", "run", "mkdocs", "serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]

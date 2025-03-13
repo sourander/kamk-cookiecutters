@@ -12,19 +12,54 @@ If you have no idea of what cookiecutter is, spend 1-2 minutes reading this shor
 
 We will use Docker to run the cookiecutter command, utilizing **uvx** (an alias for `uv tool run`). The uv is a Python package installer. The command `uv tool` is an interface for running Python-based tools without installation. We will run uv in a Docker container, so the is no need to even install uv. 
 
-&nbsp;
+Click open the section that matches your environment:
 
-#### 🐍 uv (Any OS)
+<details>
+<summary><strong>🐍 uv (Any OS)</strong></summary>
+ 
 
 If you **do have** the actual uv (and uvx) installed, the command will be super short and it will also handle line-endings according to your OS without any extra steps. If not, use Docker as described below.
 
 ```bash
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
+</details>
 
-&nbsp;
+<details>
+<summary><strong>🔷 Git Bash (Windows)</strong></summary>
 
-#### 🐧 Linux / MacOS
+```bash
+winpty docker run -it --rm \
+-v "/$(pwd):/workspace" \
+-w '//workspace' \
+ghcr.io/astral-sh/uv:python3.11-bookworm \
+uvx cookiecutter gh:sourander/kamk-cookiecutters -f
+```
+
+And then, push these to git and fix line endings as you. Read more at [#fix-line-endings](#fix-line-endings).
+
+</details>
+
+<details>
+<summary><strong>🟦 PowerShell 7.x (Any OS)</strong></summary>
+
+```powershell
+docker run -it --rm `
+-v "${PWD}:/workspace" `
+-w /workspace `
+ghcr.io/astral-sh/uv:python3.11-bookworm `
+uvx cookiecutter gh:sourander/kamk-cookiecutters -f
+```
+
+And then, push these to git and fix line endings as you go. Read more at [#fix-line-endings](#fix-line-endings).
+
+
+
+</details>
+
+
+<details>
+<summary><strong>🐧 Bash (Linux / MacOS)</strong></summary>
 
 ```bash
 docker run -it --rm \
@@ -36,45 +71,41 @@ uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 
 🔑 Running as sudo? Read more below. [^1]
 
-&nbsp;
-
-#### 🔷 Git Bash (in Windows)
-
-```bash
-winpty docker run -it --rm \
--v "/$(pwd):/workspace" \
--w '//workspace' \
-ghcr.io/astral-sh/uv:python3.11-bookworm \
-uvx cookiecutter gh:sourander/kamk-cookiecutters -f
-```
-
-Then, fix line endings:
-
-```bash
-find . -type f ! -path "./.git/*" -exec unix2dos {} \;
-```
+</details>
 
 &nbsp;
 
-#### 🟦 PowerShell 7.x
+### Fix Line Ending
 
-Important! The CRLF-fixing command will only work on *actual* PowerShell 7.x. The Windows Terminal is not enough. That will add some nonsense UTF-8 BOM encoding to the files. You do not want this. If you are a PowerShell, start using the PowerShell 7.x instead of the legacy Windows PowerShell that OS ships with.
+*Note that this section is only for Windows users. If you are using Linux or MacOS, you can skip this section. You can continue living in the "it just works" world.* 🌈
 
-```powershell
-docker run -it --rm `
--v "${PWD}:/workspace" `
--w /workspace `
-ghcr.io/astral-sh/uv:python3.11-bookworm `
-uvx cookiecutter gh:sourander/kamk-cookiecutters -f
+Do you **need** to fix this? It is not mandatory, but it is a good practice to have consistent line endings in your project. Also, this *might* add some pain if you are using Windows tools like Notepad for any reason. The **root cause** of this problem is how Windows and Unix-like OSs handle line endings. Windows uses `CRLF` (*Carriage Return and Line Feed*) and Unix-like OSs use `LF` (*only Line Feed*). The container is running linux (Debian Bookworm), and thus, the `cookiecutter` produces files that are, well, UNIX-like. 
+
+When you add the files to the staging for the first time, you will see a warning like this (due to `core.autocrlf` being set to `true` by default in Windows):
+
+```console
+$ git add .
+warning: in the working copy of '.gitlab-ci.yml', LF will be replaced by CRLF ...
+warning: in the working copy of 'HOW-TO-DOCS.md', LF will be replaced by CRLF ...
+...
+warning: in the working copy of 'docker-compose-docs.yml', LF will be replaced by CRLF ...
 ```
 
-And then, fix line endings:
+You can continue commiting the files and push them to the `origin main` (GitLab) as usually. The actual fix happens in after this step.
 
-```powershell
-Get-ChildItem -Recurse -File -Path . -Exclude .git | ForEach-Object {
-    (Get-Content $_.FullName) | Set-Content $_.FullName
-}
+```bash
+git commit -m "Cookiecutter initialized and pushing for GitLab Pages for the first time"
+git push
 ```
+
+Now, the LF's have been replaced by CRLF's, **but only in the commits**, and not in your working directory. To get these fixes applied into your working directory, you need to remove all files from the index and reset the working directory to the last commit. This will get the CRLF endings back to LF. The actual *fix* is in the following commands:
+
+```bash
+git rm --cached -r .
+git reset --hard
+```
+
+Now, if you inspect the bottom right corner of the VS Code while having some of the previously problematic files open, you will see `CRLF` instead of `LF`. In GitLab and in the actual commit, the line endings follow the Unix-like style. Your git performs the conversion automatically when you commit and push the files (assuming the `core.autocrlf==true`).
 
 &nbsp;
 

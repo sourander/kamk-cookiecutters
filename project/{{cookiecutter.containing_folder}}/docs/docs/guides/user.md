@@ -40,26 +40,24 @@ Use case diagrams are a great way to present use cases or user stories visually.
 
 Here is an example of a use case diagram:
 
-```puml
-@startuml
+```mermaid
+graph TD
+    %% Define Actors
+    P["🧍 Passenger"] 
+    AE["🧍 Flight Attendant"]
 
-left to right direction
+    %% Define System Boundary
+    subgraph WeflyApp ["WeflyApp"]
+        UC1["(Check In)"]
+        UC2["(Check Departure Time)"]
+        UC3["(Check Check-In Status)"]
+    end
 
-actor Passenger as P
-actor "Flight attendant" as AE
-
-rectangle WeflyApp {
-  usecase "Check In" as UC1
-  usecase "Check Departure Time" as UC2
-  usecase "Check Check-In Status" as UC3
-}
-
-P --> UC1
-P --> UC2
-AE -up-> UC2
-AE -up-> UC3
-
-@enduml
+    %% Define Relationships
+    P --> UC1
+    P --> UC2
+    AE -.-> UC2
+    AE -.-> UC3
 ```
 
 !!! tip

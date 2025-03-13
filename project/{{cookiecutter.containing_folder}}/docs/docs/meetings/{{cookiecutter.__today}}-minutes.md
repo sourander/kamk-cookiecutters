@@ -1,5 +1,9 @@
 # {{ cookiecutter.__today }} minutes
 
+!!! tip
+
+    If you are using some other systems for handling meeting notes, simply add the link here. Remember, this is *your team's* documentation. Make it work for you.
+
 ## Meeting Information
 - **Time:** [hh:mm] - [hh:mm] 
 - **Attendees:** [List of Attendees]

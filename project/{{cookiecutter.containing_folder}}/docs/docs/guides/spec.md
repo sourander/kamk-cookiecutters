@@ -22,7 +22,7 @@ Before diving deeper into the template, we need to clarify some things about the
 
 ### Just-In-Time Planning
 
-**Big Design Up Front (BDUF)** approach is not a good fit for Agile (or Scrum). The Agile manifesto states one of its core values as: *"Working software over comprehensive documentation"*. Thus, in Agile, typical Waterfall artifacts such as Software Requirements Spec (SRS) or Software Design Document (SSD) are not really needed [^0a1d1b].
+**Big Design Up Front (BDUF)** approach is not a good fit for Agile (or Scrum). The Agile manifesto states one of its core values as: *"Working software over comprehensive documentation"* [^85b4b1]. Thus, in Agile, typical Waterfall artifacts such as Software Requirements Spec (SRS) or Software Design Document (SSD) are not really needed [^0a1d1b].
 
 However, this does not mean we couldn't or shouldn't plan anything upfront [^f01c74]. Planning allows us to avoid aimlessly wandering in the dark. We will design **as little as possible** and **as late as possible**. In other words: we plan **just in time** (JIT).
 
@@ -88,26 +88,25 @@ We will not be doing this. We will try and practice the Agile way of doing thing
 
 It is important to know that feature-rich project management solutions have nested Issue hierarchies: all nodes are Issues, but some Issues have relationships such as `is member of` with other Issues. In practice, this creates a network (or a graph) of Issues. **One possible way** to structure this hierarchy is shown in the diagram below. Note that there is no universal standard for this. Different companies may use different Scrum practices. Can an Epic be contained in another Epic? Maybe, maybe not. It depends on the company's business rules - which hopefully have been documented. Also, the chosen project management tool might have limitations.
 
-```puml
-@startmindmap
-*[#LightSeaGreen] Portfolio
-**[#AquaMarine] FE-1
-***[#LightBlue] Epic-123
-***[#LightBlue] Epic-124
-**[#AquaMarine] FE-2
-***[#LightBlue] Epic-125
-***[#LightBlue] Epic-126
-****[#GreenYellow] Story-435
-*****_ Sub-Task 501
-*****_ Sub-Task 504
-****[#PaleGreen] Bug-436
-*****_ Sub-Task 507
-*****_ Sub-Task 508
-*****_ Sub-Task 509
-****[#MediumTurquoise] Task-437
-*****_ Sub-Task 512
-*****_ Sub-Task 513
-@endmindmap
+```mermaid
+mindmap
+  root((Portfolio))
+    FE-1
+      Epic-123
+      Epic-124
+    FE-2
+      Epic-125
+      Epic-126
+        Story-435
+          Sub-Task 501
+          Sub-Task 504
+        Bug-436
+          Sub-Task 507
+          Sub-Task 508
+          Sub-Task 509
+        Task-437
+          Sub-Task 512
+          Sub-Task 513
 ```
 
 Below is some terminology explanations [^61b290]:
