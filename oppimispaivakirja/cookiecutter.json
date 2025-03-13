@@ -9,7 +9,7 @@
     "author": "Lisa Johnson",
     "line_endings": ["windows", "unix"],
 
-    "_new_lines": "{% if cookiecutter.line_endings == 'windows' %}\\r\\n{% else %}\\n{% endif %}",
+    "_new_lines": "{% if cookiecutter.line_endings == 'windows' %}\r\n{% else %}\n{% endif %}",
 
     "__week_nro": "{% now 'utc', '%V' %}",
     "__week_nro_plus": "{{ '%02d' | format((cookiecutter.__week_nro | int) + 1) }}",
