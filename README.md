@@ -36,7 +36,7 @@ ghcr.io/astral-sh/uv:python3.11-bookworm \
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
-And then, push these to git and fix line endings as you. Read more at [#fix-line-endings](#fix-line-endings).
+And then, push these to git and immediately fix line endings as well. How? Read more at [#fix-line-endings](#fix-line-endings).
 
 </details>
 
@@ -51,7 +51,7 @@ ghcr.io/astral-sh/uv:python3.11-bookworm `
 uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 ```
 
-And then, push these to git and fix line endings as you go. Read more at [#fix-line-endings](#fix-line-endings).
+And then, push these to git and immediately fix line endings as well. How? Read more at [#fix-line-endings](#fix-line-endings).
 
 
 
@@ -75,7 +75,7 @@ uvx cookiecutter gh:sourander/kamk-cookiecutters -f
 
 &nbsp;
 
-### Fix Line Ending
+### Fix Line Endings
 
 *Note that this section is only for Windows users. If you are using Linux or MacOS, you can skip this section. You can continue living in the "it just works" world.* 🌈
 
