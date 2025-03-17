@@ -12,4 +12,4 @@ services:
       - ./docs:/docs
       - /docs/.venv # Avoid mounting the venv to the host
     working_dir: /docs
-    command: ["uv", "run", "mkdocs", "serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]
+    command: ["uv", "run", "--no-sync", "mkdocs", "serve", "--dev-addr=0.0.0.0:8000", "--watch=docs"]
