@@ -1,8 +1,8 @@
-name: {{ cookiecutter.course_slug ~ '-' ~ cookiecutter.__uniqueness_id ~ '-mkdocs' }}
+name: "{{ cookiecutter.course_slug }}-{{ cookiecutter.__uniqueness_id }}-mkdocs"
 
 services:
   mkdocs:
-    container_name: {{ cookiecutter.__uniqueness_id ~ '-container' }}
+    container_name: "{{ cookiecutter.__uniqueness_id }}-container"
     build:
       context: .
       dockerfile: docs.Dockerfile
