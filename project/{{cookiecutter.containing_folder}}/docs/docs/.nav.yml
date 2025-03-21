@@ -4,4 +4,4 @@ nav:
   - guides
   - forms
   - meetings
-  - ...
+  - "*"

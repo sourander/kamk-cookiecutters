@@ -5,7 +5,7 @@ FROM ghcr.io/astral-sh/uv:python3.12-bookworm
 ARG KAMK_CUTTER=oppimispaivakirja
 
 RUN uv tool install cookiecutter
-RUN uv tool install mkdocs --with mkdocs-material --with mkdocs-awesome-pages-plugin
+RUN uv tool install mkdocs --with mkdocs-material --with mkdocs-awesome-nav
 
 # Copy the chosen cookiecutter template to templates dir
 COPY ./${KAMK_CUTTER} /templates/${KAMK_CUTTER}

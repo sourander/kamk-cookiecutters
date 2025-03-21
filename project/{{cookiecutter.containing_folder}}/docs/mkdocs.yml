@@ -37,7 +37,7 @@ markdown_extensions:
 
 plugins:
   # Navigation page ordering
-  - awesome-pages
+  - awesome-nav
   - search
 
 copyright: |

@@ -39,5 +39,5 @@ If you have uv(x) installed, you can run the documentation without Docker.
 cd docs
 
 # Run with uvx
-uvx --with mkdocs-material --with mkdocs-awesome-pages-plugin mkdocs serve
+uvx --with mkdocs-material --with mkdocs-awesome-nav-plugin mkdocs serve
 ```
