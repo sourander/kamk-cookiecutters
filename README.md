@@ -98,7 +98,7 @@ git commit -m "Cookiecutter initialized and pushing for GitLab Pages for the fir
 git push
 ```
 
-Now, the LF's have been replaced by CRLF's, **but only in the commits**, and not in your working directory. To get these fixes applied into your working directory, you need to remove all files from the index and reset the working directory to the last commit. This will get the CRLF endings back to LF. The actual *fix* is in the following commands:
+Now, the LF's have been replaced by CRLF's, **but only in the commits**, and not in your working directory. To get these fixes applied into your working directory, you need to remove all files from the index and reset the working directory to the last commit. The actual *fix* is in the following commands:
 
 ```bash
 git rm --cached -r .
@@ -119,7 +119,7 @@ Running the command above will prompt you to choose a cookiecutter from the list
 
 ## Using Templates
 
-When launching the `cookiecutter` command, you will be prompted to choose a cookiecutter from the list of available cookiecutters. The available cookiecutters are described below. Click to open.
+When launching the `cookiecutter` command, you will be prompted to choose a cookiecutter from the list of available cookiecutters. The available cookiecutter options are described below. Click to open.
 
 <details>
 <summary><strong>Oppimispäiväkirja (learning diary)</strong></summary>
@@ -134,7 +134,7 @@ The steps and brief explanations are in the table below:
 
 | Step              | Explanation                                                                       |
 | ----------------- | --------------------------------------------------------------------------------- |
-| Select a template | 1                                                                                 |
+| Select a template | 1 (the index of this template)                                                    |
 | Course name       | The name of the course you are in. The default value is always shown in brackets. |
 | Course slug       | A slugified course name. You typically do not need to change this.                |
 | Containing folder | The default is the current folder (`.`). Default requires the `-f` flag.          |
@@ -154,7 +154,7 @@ The steps and brief explanations are in the table below:
 
 | Step              | Explanation                                                                 |
 | ----------------- | --------------------------------------------------------------------------- |
-| Select a template | 2                                                                           |
+| Select a template | 2 (the index of this template)                                              |
 | Course name       | The name of the course you are in.                                          |
 | Group name        | The name of the group you are in.                                           |
 | Group authors     | The names of the group members. Separate with a comma.                      |
@@ -172,7 +172,7 @@ The Itsearviointi example lacks the GIF-animation, since the process is similar 
 
 | Step              | Explanation                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
-| Select a template | 3                                                                        |
+| Select a template | 3 (the index of this template)                                           |
 | Course name       | The name of the course you are in.                                       |
 | Course slug       | A slugified course name. You typically do not need to change this.       |
 | Containing folder | The default is the current folder (`.`). Default requires the `-f` flag. |
