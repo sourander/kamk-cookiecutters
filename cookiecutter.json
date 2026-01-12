@@ -7,8 +7,8 @@
         },
         "ai-customer-project": {
             "path": "./ai-customer-project",
-            "title": "Project",
-            "description": "Project documentation (Vision & Scope etc.)"
+            "title": "AI Asiakasprojekti",
+            "description": "Projektiraportti AI-asiakasprojektille"
         }
     }
 }
