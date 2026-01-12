@@ -10,8 +10,7 @@ make start
 
 # Start specific
 make start cookie=oppimispaivakirja
-make start cookie=project
-make start cookie=itsearviointi
+make start cookie=ai-customer-project
 ```
 
 ## Oppimispäiväkirja with Docker
@@ -23,7 +22,6 @@ docker compose up -watch
 # Start specific
 KAMK_CUTTER=oppimispaivakirja docker compose up --watch
 KAMK_CUTTER=project docker compose up --watch
-KAMK_CUTTER=itsearviointi docker compose up --watch
 
 # Stop whatever template is running
 docker compose down

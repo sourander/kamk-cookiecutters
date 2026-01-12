@@ -31,5 +31,16 @@ plugins:
   - awesome-nav
   - search
 
+nav:
+  - Johdanto: johdanto.md
+  - Projektiraportti:
+    - Projektisuunnitelma: projektiraportti/01-projektisuunnitelma.md
+    - Arkkitehtuuri: projektiraportti/02-arkkitehtuuri.md
+    - Presentaatiokalvot: projektiraportti/xx-presentaatiokalvot.md
+  - Päiväkirja: paivakirja.md
+  - Viikkoraportit: weeks/
+  - Yhteenveto: yhteenveto.md
+  - Itsearviointi: self-evaluation.md
+
 copyright: |
   {{ cookiecutter.author }} in {% now 'utc', '%Y' %}.

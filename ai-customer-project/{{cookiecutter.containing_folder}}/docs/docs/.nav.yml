@@ -3,7 +3,10 @@
 # If the file does not exist, the default ordering is alphabetical.
 
 nav:
+  # You can give a dir name a custom name
+  # Example: a need special character ('ö' or whitespace)
   - index.md
-  - planning.md
+  - paivakirja.md
+  - projektiraportti/
+  - yhteenveto.md
   - "*"
-  - conclusion.md

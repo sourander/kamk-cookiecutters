@@ -1,12 +1,12 @@
 [project]
 name = "oppimispaivakirja-{{ cookiecutter.course_slug }}"
 version = "0.42.0"
-description = "A script dependency helper for project documentation."
+description = "A script dependency helper for student learning diary."
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 
 authors = [
-    { name = "{{ cookiecutter.group_name }}" }
+    { name = "{{ cookiecutter.author }}" }
 ]
 
 dependencies = [

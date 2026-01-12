@@ -5,15 +5,10 @@
             "title": "Oppimispäiväkirja",
             "description": "MkDocs learning diary"
         },
-        "project": {
-            "path": "./project",
+        "ai-customer-project": {
+            "path": "./ai-customer-project",
             "title": "Project",
             "description": "Project documentation (Vision & Scope etc.)"
-        },
-        "itsearviointi": {
-            "path": "./itsearviointi",
-            "title": "Itsearviointi",
-            "description": "Self-assessment for mini projects and similar."
         }
     }
 }
