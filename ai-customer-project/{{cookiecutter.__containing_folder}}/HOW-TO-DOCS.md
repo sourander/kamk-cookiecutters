@@ -10,5 +10,5 @@ Hosting the site locally is crucial when writing the content.
 cd docs
 
 # Run with uvx
-uvx --with mkdocs-material --with mkdocs-awesome-nav mkdocs serve --livereload --open 
+uvx --with mkdocs-material --with mkdocs-awesome-nav mkdocs serve --livereload --open --strict
 ```
