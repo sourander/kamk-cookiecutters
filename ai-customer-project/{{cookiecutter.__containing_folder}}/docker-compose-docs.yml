@@ -1,4 +1,4 @@
-name: "{{ cookiecutter.course_slug }}-{{ cookiecutter.__uniqueness_id }}-mkdocs"
+name: "{{ cookiecutter.__project_slug }}-{{ cookiecutter.__uniqueness_id }}-mkdocs"
 
 services:
   mkdocs:

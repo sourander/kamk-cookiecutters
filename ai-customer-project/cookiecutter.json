@@ -1,10 +1,10 @@
 {
     "_extensions": ["cookiecutter.extensions.SlugifyExtension", "cookiecutter.extensions.TimeExtension"],
     
-    "course_name": "Project X",
-    "course_slug": "{{ cookiecutter.course_name | slugify }}",
+    "project_name": "Project X",
+    "__project_slug": "{{ cookiecutter.project_name | slugify }}",
     
-    "containing_folder": ".",
+    "__containing_folder": ".",
     
     "author": "Lisa Johnson",
 

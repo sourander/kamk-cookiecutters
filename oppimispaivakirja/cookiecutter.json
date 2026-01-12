@@ -2,9 +2,9 @@
     "_extensions": ["cookiecutter.extensions.SlugifyExtension", "cookiecutter.extensions.TimeExtension"],
     
     "course_name": "Linux Perusteet 2025",
-    "course_slug": "{{ cookiecutter.course_name | slugify }}",
+    "__course_slug": "{{ cookiecutter.course_name | slugify }}",
     
-    "containing_folder": ".",
+    "__containing_folder": ".",
     
     "author": "Lisa Johnson",
 
