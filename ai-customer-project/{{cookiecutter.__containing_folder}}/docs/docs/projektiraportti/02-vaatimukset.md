@@ -1,5 +1,4 @@
 # Vaatimukset
 
-!!! info
 
-    Tämä on esimerkki arkkitehtuuriosuudesta, jos/kun sellainen kuuluu sinun raporttirunkoon.
+Tässä esitellään projektin vaatimukset tai viitataan erilliseen vaatimusmäärittelydokumenttin.

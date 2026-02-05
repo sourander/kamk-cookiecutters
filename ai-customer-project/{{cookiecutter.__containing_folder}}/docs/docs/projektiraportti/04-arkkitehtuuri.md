@@ -1,5 +1,3 @@
 # Arkkitehtuuri
 
-!!! info
-
-    Tämä on esimerkki arkkitehtuuriosuudesta, jos/kun sellainen kuuluu sinun raporttirunkoon.
+Tässä esitellään toteutettu arkkitehtuuri tai viitataan erilliseen arkkitehtuurisuunnitelmaan tai UML-kaavioihin.
