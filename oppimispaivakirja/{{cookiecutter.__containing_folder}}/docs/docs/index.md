@@ -2,8 +2,14 @@
 
 **{{cookiecutter.author}}**
 
-Write a brief introduction here. What past experience or knowledge do you have relating to the course? What are your expectations?
+Kirjoita tähän lyhyt Johdanto. Mitä aiempaa kokemusta tai tietämystä sinulla on kurssin aiheista? Mitä odotat kurssilta? Tämä on oppimispäiväkirja, minkä takia Johdanto on hyvä kirjoittaa heti alussa, jotta voit palata siihen myöhemmin ja arvioida, miten odotuksesi ja kokemuksesi ovat muuttuneet kurssin aikana.
 
-## Choose your language
+Muista lukea [Oppimispäiväkirja 101](https://sourander.github.io/oat/) ohjeet huolella. Ohjeiden noudattamatta jättäminen laskee arvosanaasi.
 
-Note that you can write either in Finnish :flag_fi: or English :flag_gb: :flag_us: unless otherwise stated in the course. Feel free to rename e.g. `self-evalution.md` to `itsearviointi.md` if you prefer Finnish.
+!!! warning
+
+    Älä nimeä tätä `index.md`-tiedostoa uusiksi! Material for MkDocs ei toimi, jos aloitussivua (index.md) ei löydy.
+
+## Kirjoita suomeksi
+
+Kirjoita lähtökohtaisesi suomeksi. Jos äidinkielesi on muu kuin suomi, voit kirjoittaa koko oppimispäiväkirjan englanniksi.
