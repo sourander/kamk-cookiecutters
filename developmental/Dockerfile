@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM ghcr.io/astral-sh/uv:python3.12-bookworm
+FROM ghcr.io/astral-sh/uv:python3.13-trixie
 
 # This points to oppimispaivakirja, project, ... kamk-cookiecutter template
 ARG KAMK_CUTTER=oppimispaivakirja
