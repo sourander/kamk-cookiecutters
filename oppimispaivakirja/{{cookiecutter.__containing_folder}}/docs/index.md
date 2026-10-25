@@ -8,7 +8,7 @@ Muista lukea [Oppimispäiväkirja 101](https://sourander.github.io/oat/) ohjeet 
 
 !!! warning
 
-    Älä nimeä tätä `index.md`-tiedostoa uusiksi! Material for MkDocs ei toimi, jos aloitussivua (index.md) ei löydy.
+    Älä nimeä tätä `index.md`-tiedostoa uusiksi! Zensical ei toimi, jos aloitussivua (index.md) ei löydy.
 
 ## Kirjoita suomeksi
 

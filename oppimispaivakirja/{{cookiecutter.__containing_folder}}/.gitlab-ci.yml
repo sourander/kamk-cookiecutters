@@ -8,9 +8,9 @@ pages:
   stage: deploy
   # Debian 12 (Bookworm), LTS till 2028, with uv package manager
   image: ghcr.io/astral-sh/uv:python3.12-bookworm
-  script: 
-    - uv sync --directory "docs"
-    - uv run --directory "docs" mkdocs build --strict --verbose --site-dir "../public"
+  script:
+    - uvx zensical@latest build --strict
+    - mv site public
   pages: true # publishes the default public directory
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH   # Deploy only on main branch

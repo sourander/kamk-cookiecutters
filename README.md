@@ -4,8 +4,8 @@ Various cookiecutters for creating course-related files and directories.
 
 ## Prerequisites
 
-* uv (Python package installer)
-* git
+- uv (Python package installer)
+- git
 
 If you have no idea of what cookiecutter is, spend 1-2 minutes reading this short documentation page: [Cookiecutter docs: Overview](https://cookiecutter.readthedocs.io/en/latest/overview.html).
 
@@ -32,12 +32,6 @@ When launching the `cookiecutter` command, you will be prompted to choose a cook
 <details>
 <summary><strong>Oppimispäiväkirja (learning diary)</strong></summary>
 
-![asciinema recording](doc-assets/cookiecutter.gif)
-
-**Animaatio 1:** *Oppimispäiväkirja -template usage as GIF. Note that this is from a previous version where slug and containing directory were asked. Current version uses forced defaults.*
-
-**TIP:** If you are interested in creating similar GIF animations, you can use tool `asciinema` for recording and `agg` for GIF conversion. The tools may not be compatible with Windows.
-
 The steps and brief explanations are in the table below:
 
 | Step              | Explanation                                                                       |
@@ -49,6 +43,7 @@ The steps and brief explanations are in the table below:
 | Author            | Your Full Name.                                                                   |
 
 How to write a learning diary? Read from [Oppimispäiväkirja 101](https://sourander.github.io/oat) (in Finnish).
+
 </details>
 
 <details>
@@ -65,5 +60,5 @@ The steps and brief explanations are in the table below. The process is very sim
 | Group authors     | The names of the group member(s). Separate with a comma.         |
 
 How to write a project documentation? The template itself includes a guide for this! Also, the introduction lesson of the course will guide you through the process. If not, ask your teacher.
-</details>
 
+</details>

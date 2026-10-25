@@ -9,6 +9,6 @@ sleep 20
 
 cd /app/oppimispaivakirja
 
-# Run the MkDocs server
-# uv run mkdocs serve -a 0.0.0.0:8000
+# Run the Zensical server
+# uv run zensical serve -a 0.0.0.0:8000
 

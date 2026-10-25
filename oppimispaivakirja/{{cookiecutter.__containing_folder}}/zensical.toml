@@ -1,0 +1,75 @@
+[project]
+site_name = "{{ cookiecutter.course_name }}"
+site_author = "{{ cookiecutter.author }}"
+
+copyright = """
+Copyright &copy; {% now 'utc', '%Y' %} <a href="https://www.kamk.fi">Kajaanin Ammattikorkeakoulu Oy</a>.
+Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a>
+"""
+
+# Built-in plugins
+[project.plugins.awesome-nav]
+[project.plugins.glightbox]
+
+# Theme
+[project.theme]
+variant = "modern"
+language = "fi"
+features = [
+  "content.code.annotate",      # Code annotation
+  "content.code.copy",          # Copy code button
+  "content.code.select",        # Toggle line selection button
+  "content.footnote.tooltips",  # Footnote popup review
+  "navigation.footer",          # Next and prev page buttons
+  "navigation.sections",        # Directory contents as nav headers
+  "navigation.tracking",        # Update URL fragment when scrolling
+  "search.highlight",           # Highlight search results
+]
+
+# Theme palettes
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+# Markdown extensions
+[project.markdown_extensions]
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+
+# Syntax highlighting
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+
+# Admonitions
+admonition = {}
+pymdownx.details = {}
+
+# Emojis
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+
+# Keyboard symbols
+pymdownx.keys = {}
+
+# Caret, Mark and Tilde
+pymdownx.caret = {}
+pymdownx.mark = {}
+pymdownx.tilde = {}
+
+# Task lists
+pymdownx.tasklist.custom_checkbox = true
+
+# Content tabs
+pymdownx.tabbed.alternate_style = true
+
+# Footnotes
+footnotes = {}
